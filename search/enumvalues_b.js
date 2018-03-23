@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['three',['Three',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a623764be8e77450606390480c15a907a',1,'Core::IO::MotorControl::Motor']]],
-  ['two',['Two',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a684756b18d0e2d94f32bf8f198b8842e',1,'Core::IO::MotorControl::Motor']]]
+  ['three',['Three',['../structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html#ac9b3074b7855064180774d7d5bfe1372a125257a1db3c212fe9b1d26e31b680ef',1,'LibBBB::IO::MotorControl::Motor']]],
+  ['two',['Two',['../structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html#ac9b3074b7855064180774d7d5bfe1372a666e3793eb5ac509fac89547c286af9f',1,'LibBBB::IO::MotorControl::Motor']]]
 ];

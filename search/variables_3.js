@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['debouncetime',['debounceTime',['../structCore_1_1IO_1_1Input_1_1Setup.html#a0ee66c113b94a556d43c0246c9c4cf1e',1,'Core::IO::Input::Setup']]],
-  ['desirededge',['desiredEdge',['../structCore_1_1IO_1_1Input_1_1Setup.html#a8adf04f344f489aeba2201234aeaca21',1,'Core::IO::Input::Setup']]]
+  ['debouncetime',['debounceTime',['../structLibBBB_1_1IO_1_1Input_1_1Setup.html#a287e880ec917ae619d2814ab1fe31322',1,'LibBBB::IO::Input::Setup']]],
+  ['desirededge',['desiredEdge',['../structLibBBB_1_1IO_1_1Input_1_1Setup.html#adca7b197eb932705508a6311f6c2ea51',1,'LibBBB::IO::Input::Setup']]]
 ];

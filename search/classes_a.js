@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value',['Value',['../structCore_1_1IO_1_1IOBase_1_1Value.html',1,'Core::IO::IOBase']]]
+  ['value',['Value',['../structLibBBB_1_1IO_1_1IOBase_1_1Value.html',1,'LibBBB::IO::IOBase']]]
 ];

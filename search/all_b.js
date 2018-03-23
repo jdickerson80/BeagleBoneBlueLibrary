@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['name',['name',['../classCore_1_1IO_1_1IOBase.html#a5da019c2a91b3922c6dc3e01fccf6627',1,'Core::IO::IOBase']]],
-  ['none',['None',['../structCore_1_1IO_1_1Input_1_1Edge.html#a2e53ea28b8f8931cab264e9f9832877aae0a398850e9fc2ed21ec258cf5051b37',1,'Core::IO::Input::Edge']]]
+  ['name',['name',['../classLibBBB_1_1IO_1_1IOBase.html#ab84b84e0b23c250dc5c56d5201dda44e',1,'LibBBB::IO::IOBase']]],
+  ['none',['None',['../structLibBBB_1_1IO_1_1Input_1_1Edge.html#a72e10b0719bf2d5fac5723efd655508baf2b3d7229773bdbf875a17936bf48444',1,'LibBBB::IO::Input::Edge']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['path',['path',['../classCore_1_1IO_1_1IOBase.html#adb7dec70c1c39b19d2166c8fdea6b1f9',1,'Core::IO::IOBase']]],
+  ['path',['path',['../classLibBBB_1_1IO_1_1IOBase.html#a71d8f1f57eb6de8ed0187eaad8902b1c',1,'LibBBB::IO::IOBase']]],
   ['pathbase',['PathBase',['../UserLED_8cpp.html#a82dabd5082a2cbe691b89eec76161e4e',1,'UserLED.cpp']]],
   ['pru0_5fname',['PRU0_NAME',['../PRUDefinitions_8h.html#ac5fb5c49d130493456d42d3cdc374947',1,'PRUDefinitions.h']]],
   ['pru0_5fuevent',['PRU0_UEVENT',['../PRUDefinitions_8h.html#a313122d655f3406ee9631fed416c58e1',1,'PRUDefinitions.h']]],
@@ -14,5 +14,5 @@ var searchData=
   ['pru_5fsharedmem',['PRU_SHAREDMEM',['../PRUDefinitions_8h.html#af40a3e887744c288d2dea3c2ad18e1c3',1,'PRUDefinitions.h']]],
   ['pru_5funbind_5fpath',['PRU_UNBIND_PATH',['../PRUDefinitions_8h.html#ac529e740c7839b56b7d4554dfd9e114d',1,'PRUDefinitions.h']]],
   ['prudefinitions_2eh',['PRUDefinitions.h',['../PRUDefinitions_8h.html',1,'']]],
-  ['pulsewidth',['pulseWidth',['../classCore_1_1IO_1_1MotorControl.html#a97ccba74028ff6057d25fe794350ab7f',1,'Core::IO::MotorControl']]]
+  ['pulsewidth',['pulseWidth',['../classLibBBB_1_1IO_1_1MotorControl.html#a55e9586e72ae2fc6ab868f8cfa6429a0',1,'LibBBB::IO::MotorControl']]]
 ];

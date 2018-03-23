@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['range',['range',['../classCore_1_1Math_1_1Range.html#a6bbda5ee43af803f4bb933396d48c85a',1,'Core::Math::Range::range() const'],['../classCore_1_1Math_1_1Range.html#ac9e923afd780b6ff7b1cb2ef64cc2865',1,'Core::Math::Range::Range(const DataType &amp;lowValue, const DataType &amp;highValue)']]],
-  ['read',['read',['../classCore_1_1IO_1_1IOBase.html#ab27139c5454e00719c3b5d8d17d6a8e8',1,'Core::IO::IOBase']]],
-  ['restartprus',['restartPRUs',['../classCore_1_1ManagerPRUs.html#aea4054de5437c5ff8775633ca1ef1308',1,'Core::ManagerPRUs']]]
+  ['range',['range',['../classLibBBB_1_1Math_1_1Range.html#a4d667cd5441894830446301f16141d02',1,'LibBBB::Math::Range::range() const'],['../classLibBBB_1_1Math_1_1Range.html#a4fbb3575e5d4e630eee0b46c93d58c4d',1,'LibBBB::Math::Range::Range(const DataType &amp;lowValue, const DataType &amp;highValue)']]],
+  ['read',['read',['../classLibBBB_1_1IO_1_1IOBase.html#aa317b2515288dbe3905b675a9033e2fa',1,'LibBBB::IO::IOBase']]],
+  ['restartprus',['restartPRUs',['../classLibBBB_1_1ManagerPRUs.html#a9e6a4d0f6bd5a7218449f5afc22d5a22',1,'LibBBB::ManagerPRUs']]]
 ];

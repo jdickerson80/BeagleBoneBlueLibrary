@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['highvalue',['highValue',['../classCore_1_1Math_1_1Range.html#ab7b81c209de373e53d60c408779a7a91',1,'Core::Math::Range']]]
+  ['highvalue',['highValue',['../classLibBBB_1_1Math_1_1Range.html#a6bab451d0f667d26dc1066916a80a1d0',1,'LibBBB::Math::Range']]]
 ];

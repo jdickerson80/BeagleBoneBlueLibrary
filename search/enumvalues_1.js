@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eight',['Eight',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a1996e00687815eee0573e03d3830c529',1,'Core::IO::MotorControl::Motor']]]
+  ['eight',['Eight',['../structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html#ac9b3074b7855064180774d7d5bfe1372a044765a7cd78940091c854cbd9991bcc',1,'LibBBB::IO::MotorControl::Motor']]]
 ];

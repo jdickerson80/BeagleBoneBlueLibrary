@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['output',['Output',['../classCore_1_1IO_1_1Output.html#a559026dddbca6a26a97e819eef81d7eb',1,'Core::IO::Output']]]
+  ['output',['Output',['../classLibBBB_1_1IO_1_1Output.html#ac8610e35f05b7facdf904c7f3033381b',1,'LibBBB::IO::Output']]]
 ];

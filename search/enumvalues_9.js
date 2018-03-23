@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['red',['Red',['../structCore_1_1IO_1_1UserLED_1_1LED.html#a4c6f93e30c9e9dc2a36fb1d643f006f5a1574b6e3c21746bd1168746c387398eb',1,'Core::IO::UserLED::LED']]],
-  ['rising',['Rising',['../structCore_1_1IO_1_1Input_1_1Edge.html#a2e53ea28b8f8931cab264e9f9832877aa13ed5cc30f81909352202878088dc127',1,'Core::IO::Input::Edge']]]
+  ['red',['Red',['../structLibBBB_1_1IO_1_1UserLED_1_1LED.html#aea1c3430eab2684e6567550c21c16ba0ac11bbe459556ed4a4c1644811ef6e910',1,'LibBBB::IO::UserLED::LED']]],
+  ['rising',['Rising',['../structLibBBB_1_1IO_1_1Input_1_1Edge.html#a72e10b0719bf2d5fac5723efd655508ba2a480988c956ebaa76c28c28f30ee1ff',1,'LibBBB::IO::Input::Edge']]]
 ];
