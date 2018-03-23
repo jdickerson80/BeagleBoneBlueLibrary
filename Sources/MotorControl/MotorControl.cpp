@@ -13,7 +13,7 @@
 #define PRU_FREQUENCY_IN_MHz ( 200 )
 #define Microseconds ( 1000000.0f )
 
-namespace Core {
+namespace LibBBB  {
 namespace IO {
 
 MotorControl::MotorControl( const Motor::Enum motorNumber
@@ -26,7 +26,7 @@ MotorControl::MotorControl( const Motor::Enum motorNumber
 	, _numberOfLoops( 0 )
 	, _currentPulseWidth( 0 )
 	, _finalRampedPulseWidth( 0 )
-	, _pruPointer( Core::ManagerPRUs::instance().sharedMemoryPointer() )
+	, _pruPointer( LibBBB ::ManagerPRUs::instance().sharedMemoryPointer() )
 	, _rampRate( 0 )
 	, _dutyCycleConverter( RangeType( 1, 1000 ), dutyCyclePulseWidthRange )
 {
@@ -280,4 +280,4 @@ uint32_t MotorControl::calculatePulseWidthFromDutyCycle( uint32_t dutyCycle )
 }
 
 } // namespace IO
-} // namespace Core
+} // namespace LibBBB

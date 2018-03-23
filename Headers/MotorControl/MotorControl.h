@@ -9,7 +9,7 @@
 #include <pthread.h>
 #include "LinearConverter.h"
 
-namespace Core {
+namespace LibBBB {
 namespace IO {
 
 /**
@@ -199,5 +199,5 @@ private:
 };
 
 } // namespace IO
-} // namespace Core
+} // namespace LibBBB
 #endif // MOTORCONTROL_H

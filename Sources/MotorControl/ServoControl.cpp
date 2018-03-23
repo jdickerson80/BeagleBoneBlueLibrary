@@ -1,6 +1,6 @@
 #include "ServoControl.h"
 
-namespace Core {
+namespace LibBBB  {
 namespace IO {
 
 ServoControl::ServoControl( const MotorControl::Motor::Enum motorNumber
@@ -35,4 +35,4 @@ int32_t ServoControl::desiredDegree() const
 
 
 } // namespace IO
-} // namespace Core
+} // namespace LibBBB

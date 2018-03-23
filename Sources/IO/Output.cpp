@@ -2,7 +2,7 @@
 
 #include <unistd.h>
 
-namespace Core {
+namespace LibBBB  {
 namespace IO {
 
 Output::Output( int number, const Setup& setup )
@@ -126,4 +126,4 @@ void* Output::threadedToggle( void* value )
 }
 
 } // namespace IO
-} // namespace Core
+} // namespace LibBBB

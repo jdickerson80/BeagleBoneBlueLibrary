@@ -1,7 +1,7 @@
 #include "ThreadHelper.h"
 #include <stdio.h>
 
-namespace Core {
+namespace LibBBB  {
 
 int ThreadHelper::startDetachedThread( pthread_t* thread, StartRoutine startRoutine, bool* isRunningFlag, void* objectPointer )
 {
@@ -67,4 +67,4 @@ int ThreadHelper::startJoinableThread( pthread_t* thread, StartRoutine startRout
 	}
 }
 
-} // namespace Core
+} // namespace LibBBB

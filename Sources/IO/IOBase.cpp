@@ -33,7 +33,7 @@
 
 using namespace std;
 
-namespace Core {
+namespace LibBBB  {
 namespace IO {
 
 IOBase::IOBase( int number, Direction::Enum whatDirection  )
@@ -192,4 +192,4 @@ IOBase::Direction::Enum IOBase::getDirection()
 }
 
 } // namespace IO
-} // namespace Core
+} // namespace LibBBB

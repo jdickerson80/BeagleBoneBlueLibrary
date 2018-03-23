@@ -7,7 +7,7 @@
 
 #include <stdint.h>
 
-namespace Core {
+namespace LibBBB  {
 
 /**
  * @brief	The ManagerPRUs class manages BOTH PRUs for the application. This ensures
@@ -93,5 +93,5 @@ private:
 	int mapVirtualAddressSpace();
 };
 
-} // namespace Core
+} // namespace LibBBB
 #endif // MANAGERPRUS_h

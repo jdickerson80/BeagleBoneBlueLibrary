@@ -13,7 +13,7 @@
 #define User2Path ( "/beaglebone:green:usr2/" )
 #define User3Path ( "/beaglebone:green:usr3/" )
 
-namespace Core {
+namespace LibBBB  {
 namespace IO {
 
 std::string enumToString( UserLED::LED::Enum whatLED )
@@ -186,4 +186,4 @@ void* UserLED::handleBlinking( void* value )
 }
 
 } // namespace IO
-} // namespace Core
+} // namespace LibBBB

@@ -7,7 +7,7 @@
 
 #include "IOBase.h"
 
-namespace Core {
+namespace LibBBB {
 namespace IO {
 
 /**
@@ -145,6 +145,6 @@ private:
 };
 
 } // namespace IO
-} // namespace Core
+} // namespace LibBBB
 
 #endif // OUTPUT_H_

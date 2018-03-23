@@ -7,7 +7,7 @@
 
 #include <pthread.h>
 
-namespace Core {
+namespace LibBBB  {
 
 /**
  * @brief The ThreadHelper class wraps the attributes
@@ -71,5 +71,5 @@ private:
 	 */
 	ThreadHelper& operator=( const ThreadHelper& threadHelper );
 };
-} // namespace Core
+} // namespace LibBBB
 #endif // THREADHELPER_H

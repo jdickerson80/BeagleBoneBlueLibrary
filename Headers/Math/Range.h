@@ -5,7 +5,7 @@
 #ifndef RANGE_H
 #define RANGE_H
 
-namespace Core {
+namespace LibBBB {
 namespace Math {
 
 /**
@@ -60,5 +60,5 @@ public:
 };
 
 } // namespace Math
-} // namespace Core
+} // namespace LibBBB
 #endif // RANGE_H

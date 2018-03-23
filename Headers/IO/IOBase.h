@@ -8,7 +8,7 @@
 #include <string>
 #include <fstream>
 
-namespace Core {
+namespace LibBBB {
 namespace IO {
 
 /**
@@ -181,6 +181,6 @@ private:
 };
 
 } // namespace IO
-} // namespace Core
+} // namespace LibBBB
 
 #endif // IOBASE_H_

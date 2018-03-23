@@ -11,7 +11,7 @@
 #include <stdexcept>
 #include <stdio.h>
 
-namespace Core {
+namespace LibBBB  {
 
 ManagerPRUs::ManagerPRUs()
 	: _pruRunning( false )
@@ -172,4 +172,4 @@ const uint32_t* const ManagerPRUs::sharedMemoryPointer() const
 {
 	return _pruSharedMemoryPointer;
 }
-} // namespace Core
+} // namespace LibBBB

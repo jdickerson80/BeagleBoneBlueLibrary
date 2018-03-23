@@ -7,7 +7,7 @@
 
 #include "MotorControl.h"
 
-namespace Core {
+namespace LibBBB  {
 namespace IO {
 
 /**
@@ -67,5 +67,5 @@ public:
 };
 
 } // namespace IO
-} // namespace Core
+} // namespace LibBBB
 #endif // SERVOCONTROL_H
