@@ -1,0 +1,9 @@
+<map id="LibBBB::IO::UserLED::Setup::Setup" name="LibBBB::IO::UserLED::Setup::Setup">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1UserLED.html#a958bf7b3257913811343c7972b7dec52" title="UserLED constructs an instance of a user led. " alt="" coords="202,5,351,49"/>
+<area shape="rect" id="node4" href="$classLibBBB_1_1IO_1_1UserLED.html#a0273b7090979ffedfd6cfb0422d886c4" title="~UserLED destroys the LED. " alt="" coords="202,73,351,117"/>
+<area shape="rect" id="node5" href="$classLibBBB_1_1IO_1_1UserLED.html#a5d6714d1ddc854308c1d4cc5448ded07" title="setState method sets the state of the LED " alt="" coords="414,189,562,233"/>
+<area shape="rect" id="node6" href="$classLibBBB_1_1IO_1_1UserLED.html#a98c0a865b590a4149e3b5a8d8c97d6cd" title="state getter " alt="" coords="628,253,777,297"/>
+<area shape="rect" id="node8" href="$classLibBBB_1_1IO_1_1UserLED.html#a3ae6a5944f06980dee85eb4504ec9eb0" title="changeBlinkTime method changes the time of the blink " alt="" coords="202,193,351,237"/>
+<area shape="rect" id="node3" href="$namespaceLibBBB_1_1IO.html#a01392ab9bdaf95b9edb9f12fa4e8e215" title="LibBBB::IO::enumToString" alt="" coords="399,13,577,41"/>
+<area shape="rect" id="node7" href="$classLibBBB_1_1ThreadHelper.html#a6999e18135496ef252b1c43c374c20f9" title="startDetachedThread " alt="" coords="625,185,780,229"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="LibBBB::IO::IOBase::read" name="LibBBB::IO::IOBase::read">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1Input.html#ad13e7774b58c80b4fc4fd79e1794b182" title="getEdgeType getter " alt="" coords="196,5,328,49"/>
+<area shape="rect" id="node4" href="$classLibBBB_1_1IO_1_1IOBase.html#a8ae8a79c81d61625f5b864abebe944a2" title="getValue getter " alt="" coords="192,112,332,156"/>
+<area shape="rect" id="node3" href="$structLibBBB_1_1IO_1_1Input_1_1Setup.html#a1ad926b46c1818dd934b0b99ddb63386" title="LibBBB::IO::Input::\lSetup::Setup" alt="" coords="748,17,880,61"/>
+<area shape="rect" id="node5" href="$classLibBBB_1_1IO_1_1Input.html#a0934c43a3f6be5e62dfc733552e5074d" title="waitForEdge method is a blocking wait for edge. Therefore, the callee will halt its thread until this..." alt="" coords="381,77,513,121"/>
+<area shape="rect" id="node7" href="$classLibBBB_1_1IO_1_1Output.html#a70c6eac9a46013605717fef0ba6c2010" title="toggleOutput method toggles the output once " alt="" coords="380,145,514,189"/>
+<area shape="rect" id="node10" href="$classLibBBB_1_1IO_1_1Output.html#a4fd232f60d3148259f6d5d91e842950a" title="cancelToggle cancels toggling " alt="" coords="380,213,514,257"/>
+<area shape="rect" id="node6" href="$classLibBBB_1_1IO_1_1Input.html#a463bb83321475919ec672e9ac75b31b1" title="cancelWaitForEdge method cancels waiting for the edge. " alt="" coords="562,77,700,121"/>
+<area shape="rect" id="node8" href="$classLibBBB_1_1IO_1_1Output.html#a3620dfac4d3a9ee34c3a8e2ea39ae2dd" title="toggleOutput method toggles the output every using the time arguement. " alt="" coords="564,145,699,189"/>
+<area shape="rect" id="node9" href="$structLibBBB_1_1IO_1_1Output_1_1Setup.html#ac7d4ee82c7eabd07ba140ec061c28adc" title="LibBBB::IO::Output\l::Setup::Setup" alt="" coords="564,213,699,257"/>
+</map>

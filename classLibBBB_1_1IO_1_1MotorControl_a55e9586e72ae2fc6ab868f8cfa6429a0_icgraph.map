@@ -1,0 +1,5 @@
+<map id="LibBBB::IO::MotorControl::pulseWidth" name="LibBBB::IO::MotorControl::pulseWidth">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1MotorControl.html#ab1fb69041c1faa982c19e94e872a675b" title="setPulseWidth sets the final pulse width of the signal using the given ramp time " alt="" coords="225,5,397,49"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1MotorControl.html#afe600d5686e325e4f7de645729ba1c4e" title="dutyCycle getter " alt="" coords="225,73,397,117"/>
+<area shape="rect" id="node4" href="$classLibBBB_1_1IO_1_1ServoControl.html#a6ec9a8002dbffb6d81f0227f271816ff" title="desiredDegree getter " alt="" coords="225,141,398,185"/>
+</map>

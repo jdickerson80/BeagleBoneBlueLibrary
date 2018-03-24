@@ -1,0 +1,6 @@
+<map id="LibBBB::IO::Output::setValue" name="LibBBB::IO::Output::setValue">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1Output.html#a70c6eac9a46013605717fef0ba6c2010" title="toggleOutput method toggles the output once " alt="" coords="188,9,323,53"/>
+<area shape="rect" id="node4" href="$structLibBBB_1_1IO_1_1Output_1_1Setup.html#ac7d4ee82c7eabd07ba140ec061c28adc" title="LibBBB::IO::Output\l::Setup::Setup" alt="" coords="371,73,505,117"/>
+<area shape="rect" id="node5" href="$classLibBBB_1_1IO_1_1Output.html#a4fd232f60d3148259f6d5d91e842950a" title="cancelToggle cancels toggling " alt="" coords="188,129,323,173"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1Output.html#a3620dfac4d3a9ee34c3a8e2ea39ae2dd" title="toggleOutput method toggles the output every using the time arguement. " alt="" coords="371,5,505,49"/>
+</map>

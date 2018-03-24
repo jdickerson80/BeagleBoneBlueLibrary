@@ -1,0 +1,4 @@
+<map id="LibBBB::IO::MotorControl::frequency" name="LibBBB::IO::MotorControl::frequency">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1MotorControl.html#a6cc4129f244eceb6031ab03f62ce9b6a" title="setFrequency sets the frequency of the signal " alt="" coords="225,5,397,49"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1MotorControl.html#afe600d5686e325e4f7de645729ba1c4e" title="dutyCycle getter " alt="" coords="225,73,397,117"/>
+</map>

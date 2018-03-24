@@ -1,0 +1,4 @@
+<map id="LibBBB::IO::MotorControl::setDutyCycle" name="LibBBB::IO::MotorControl::setDutyCycle">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1MotorControl.html#a2caa62735bf2f443e88a9095287cbad2" title="setPulseWidth sets the pulse width of the signal " alt="" coords="242,5,414,49"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1Math_1_1LinearConverter.html#ae5647c399171683e3516211bd5e4da2c" title="convertXtoY getter. Uses y = mx + b. " alt="" coords="225,73,431,117"/>
+</map>

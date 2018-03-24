@@ -1,0 +1,7 @@
+<map id="LibBBB::IO::IOBase::path" name="LibBBB::IO::IOBase::path">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1Input.html#a0934c43a3f6be5e62dfc733552e5074d" title="waitForEdge method is a blocking wait for edge. Therefore, the callee will halt its thread until this..." alt="" coords="194,61,326,105"/>
+<area shape="rect" id="node5" href="$classLibBBB_1_1IO_1_1Output.html#a4fd232f60d3148259f6d5d91e842950a" title="cancelToggle cancels toggling " alt="" coords="192,129,327,173"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1Input.html#a463bb83321475919ec672e9ac75b31b1" title="cancelWaitForEdge method cancels waiting for the edge. " alt="" coords="375,5,513,49"/>
+<area shape="rect" id="node4" href="$structLibBBB_1_1IO_1_1Input_1_1Setup.html#a1ad926b46c1818dd934b0b99ddb63386" title="LibBBB::IO::Input::\lSetup::Setup" alt="" coords="561,36,693,80"/>
+<area shape="rect" id="node6" href="$structLibBBB_1_1IO_1_1Output_1_1Setup.html#ac7d4ee82c7eabd07ba140ec061c28adc" title="LibBBB::IO::Output\l::Setup::Setup" alt="" coords="377,129,511,173"/>
+</map>

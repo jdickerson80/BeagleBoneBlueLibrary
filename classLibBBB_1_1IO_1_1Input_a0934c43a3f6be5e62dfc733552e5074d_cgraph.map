@@ -1,0 +1,5 @@
+<map id="LibBBB::IO::Input::waitForEdge" name="LibBBB::IO::Input::waitForEdge">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1IOBase.html#a71d8f1f57eb6de8ed0187eaad8902b1c" title="path getter " alt="" coords="185,5,324,49"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1IOBase.html#a8ae8a79c81d61625f5b864abebe944a2" title="getValue getter " alt="" coords="185,73,324,117"/>
+<area shape="rect" id="node4" href="$classLibBBB_1_1IO_1_1IOBase.html#aa317b2515288dbe3905b675a9033e2fa" title="read function that reads the value of the given file filename " alt="" coords="372,73,511,117"/>
+</map>

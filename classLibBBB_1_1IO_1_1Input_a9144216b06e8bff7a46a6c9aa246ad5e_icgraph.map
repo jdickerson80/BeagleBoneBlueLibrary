@@ -1,0 +1,4 @@
+<map id="LibBBB::IO::Input::setEdgeType" name="LibBBB::IO::Input::setEdgeType">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1Input.html#a4e59f6e2c64f7a85adff569daf35b3d3" title="Input constructs an input based on the given setup. The constructor will automatically export the pin..." alt="" coords="185,5,317,49"/>
+<area shape="rect" id="node3" href="$structLibBBB_1_1IO_1_1Input_1_1Setup.html#a1ad926b46c1818dd934b0b99ddb63386" title="LibBBB::IO::Input::\lSetup::Setup" alt="" coords="365,36,497,80"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="LibBBB::IO::Input::cancelWaitForEdge" name="LibBBB::IO::Input::cancelWaitForEdge">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1Input.html#a0934c43a3f6be5e62dfc733552e5074d" title="waitForEdge method is a blocking wait for edge. Therefore, the callee will halt its thread until this..." alt="" coords="191,40,323,84"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1IOBase.html#a71d8f1f57eb6de8ed0187eaad8902b1c" title="path getter " alt="" coords="371,5,510,49"/>
+<area shape="rect" id="node4" href="$classLibBBB_1_1IO_1_1IOBase.html#a8ae8a79c81d61625f5b864abebe944a2" title="getValue getter " alt="" coords="371,73,510,117"/>
+<area shape="rect" id="node5" href="$classLibBBB_1_1IO_1_1IOBase.html#aa317b2515288dbe3905b675a9033e2fa" title="read function that reads the value of the given file filename " alt="" coords="558,73,697,117"/>
+</map>

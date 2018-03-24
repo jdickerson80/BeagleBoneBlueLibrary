@@ -1,0 +1,5 @@
+<map id="LibBBB::IO::UserLED::state" name="LibBBB::IO::UserLED::state">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1UserLED.html#a5d6714d1ddc854308c1d4cc5448ded07" title="setState method sets the state of the LED " alt="" coords="202,56,351,100"/>
+<area shape="rect" id="node4" href="$structLibBBB_1_1IO_1_1UserLED_1_1Setup.html#a25c259e98aa65d6594d0031eb0463b01" title="LibBBB::IO::UserLED\l::Setup::Setup" alt="" coords="596,65,744,109"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1UserLED.html#a3ae6a5944f06980dee85eb4504ec9eb0" title="changeBlinkTime method changes the time of the blink " alt="" coords="399,5,548,49"/>
+</map>

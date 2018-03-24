@@ -1,0 +1,13 @@
+<map id="LibBBB::IO::Output::Setup::Setup" name="LibBBB::IO::Output::Setup::Setup">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1Output.html#ac8610e35f05b7facdf904c7f3033381b" title="Output constructs an output based on the given setup. The constructor will automatically export the p..." alt="" coords="192,5,327,49"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1Output.html#aeb10fe82d25a97cf13bcc750190cac27" title="~Output destroys the output. This automatically unexports the pin. " alt="" coords="192,73,327,117"/>
+<area shape="rect" id="node4" href="$classLibBBB_1_1IO_1_1Output.html#a6ae67445b434b37d11e75cb0391e0b3f" title="setValue setter " alt="" coords="381,164,516,208"/>
+<area shape="rect" id="node6" href="$classLibBBB_1_1IO_1_1Output.html#ab3936146b148bfe33ddf8f02ef64d5bf" title="isToggling getter " alt="" coords="192,329,327,373"/>
+<area shape="rect" id="node7" href="$classLibBBB_1_1IO_1_1Output.html#a70c6eac9a46013605717fef0ba6c2010" title="toggleOutput method toggles the output once " alt="" coords="192,193,327,237"/>
+<area shape="rect" id="node10" href="$classLibBBB_1_1IO_1_1Output.html#aa29e923ee8405b56a89ff7e43469ec8c" title="changeToggleTime changes the toggling time " alt="" coords="188,397,331,441"/>
+<area shape="rect" id="node11" href="$classLibBBB_1_1IO_1_1Output.html#a4fd232f60d3148259f6d5d91e842950a" title="cancelToggle cancels toggling " alt="" coords="192,261,327,305"/>
+<area shape="rect" id="node5" href="$classLibBBB_1_1IO_1_1IOBase.html#a8b8069af640a6ca1d8ad885015d2e2e5" title="write write function that writes a single string value to a file in the path provided ..." alt="" coords="566,164,705,208"/>
+<area shape="rect" id="node8" href="$classLibBBB_1_1IO_1_1IOBase.html#a8ae8a79c81d61625f5b864abebe944a2" title="getValue getter " alt="" coords="379,232,518,276"/>
+<area shape="rect" id="node9" href="$classLibBBB_1_1IO_1_1IOBase.html#aa317b2515288dbe3905b675a9033e2fa" title="read function that reads the value of the given file filename " alt="" coords="566,232,705,276"/>
+<area shape="rect" id="node12" href="$classLibBBB_1_1IO_1_1IOBase.html#a71d8f1f57eb6de8ed0187eaad8902b1c" title="path getter " alt="" coords="379,300,518,344"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="LibBBB::IO::Output::cancelToggle" name="LibBBB::IO::Output::cancelToggle">
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1IOBase.html#a71d8f1f57eb6de8ed0187eaad8902b1c" title="path getter " alt="" coords="188,5,327,49"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1IOBase.html#a8ae8a79c81d61625f5b864abebe944a2" title="getValue getter " alt="" coords="188,73,327,117"/>
+<area shape="rect" id="node5" href="$classLibBBB_1_1IO_1_1Output.html#a6ae67445b434b37d11e75cb0391e0b3f" title="setValue setter " alt="" coords="190,141,325,185"/>
+<area shape="rect" id="node4" href="$classLibBBB_1_1IO_1_1IOBase.html#aa317b2515288dbe3905b675a9033e2fa" title="read function that reads the value of the given file filename " alt="" coords="375,73,514,117"/>
+<area shape="rect" id="node6" href="$classLibBBB_1_1IO_1_1IOBase.html#a8b8069af640a6ca1d8ad885015d2e2e5" title="write write function that writes a single string value to a file in the path provided ..." alt="" coords="375,141,514,185"/>
+</map>
