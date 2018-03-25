@@ -9,7 +9,7 @@
 
 class sockaddr_rc;
 
-namespace VehicleControl {
+namespace LibBBB {
 namespace Bluetooth {
 
 /**
@@ -93,6 +93,6 @@ private:
 };
 
 } // namespace Bluetooth
-} // namespace VehicleControl
+} // namespace LibBBB
 
 #endif // BLUETOOTHMANAGER_H

@@ -5,7 +5,7 @@
 //#include <unistd.h>
 //#include "ThreadHelper.h"
 
-//namespace VehicleControl {
+//namespace LibBBB {
 //namespace Bluetooth {
 
 //#define BluetoothClientPollPeriod ( 4 )
@@ -88,4 +88,4 @@
 //}
 
 //} // namespace Bluetooth
-//} // namespace VehicleControl
+//} // namespace LibBBB

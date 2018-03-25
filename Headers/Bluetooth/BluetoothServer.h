@@ -7,7 +7,7 @@
 
 //#include <BluetoothBase.h>
 
-//namespace VehicleControl {
+//namespace LibBBB {
 //namespace Bluetooth {
 
 //class Server : public Base
@@ -32,6 +32,6 @@
 //};
 
 //} // namespace Bluetooth
-//} // namespace VehicleControl
+//} // namespace LibBBB
 
 //#endif // BLUETOOTHSERVER_H

@@ -7,7 +7,7 @@
 //#include <unistd.h>
 //#include "ThreadHelper.h"
 
-//namespace VehicleControl {
+//namespace LibBBB {
 //namespace Bluetooth {
 
 //Server::Server( const std::string& peerAddress, const std::string& localAddress )
@@ -130,4 +130,4 @@
 //}
 
 //} // namespace Bluetooth
-//} // namespace VehicleControl
+//} // namespace LibBBB

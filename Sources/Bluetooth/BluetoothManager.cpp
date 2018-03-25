@@ -6,7 +6,7 @@
 #include "ThreadHelper.h"
 #include "BluetoothInterface.h"
 
-namespace VehicleControl {
+namespace LibBBB {
 namespace Bluetooth {
 
 Manager::Manager( const std::string& peerAddress
@@ -182,4 +182,4 @@ void* Manager::connectServer( void* input )
 }
 
 } // namespace Bluetooth
-} // namespace VehicleControl
+} // namespace LibBBB

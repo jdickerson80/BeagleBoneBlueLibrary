@@ -3,7 +3,7 @@
 
 #include "BluetoothManager.h"
 
-namespace VehicleControl {
+namespace LibBBB {
 namespace Bluetooth {
 
 class Manager::Interface
@@ -18,5 +18,5 @@ public:
 
 
 } // namespace Bluetooth
-} // namespace VehicleControl
+} // namespace LibBBB
 #endif // BLUETOOTHINTERFACE_H
