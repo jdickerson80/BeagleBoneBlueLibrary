@@ -1,5 +1,18 @@
 var files =
 [
+    [ "BluetoothClient.cpp", "BluetoothClient_8cpp.html", null ],
+    [ "BluetoothClient.h", "BluetoothClient_8h.html", null ],
+    [ "BluetoothDefinitions.h", "BluetoothDefinitions_8h.html", "BluetoothDefinitions_8h" ],
+    [ "BluetoothInterface.h", "BluetoothInterface_8h.html", [
+      [ "Interface", "classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html", "classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface" ]
+    ] ],
+    [ "BluetoothManager.cpp", "BluetoothManager_8cpp.html", null ],
+    [ "BluetoothManager.h", "BluetoothManager_8h.html", [
+      [ "Manager", "classLibBBB_1_1Bluetooth_1_1Manager.html", "classLibBBB_1_1Bluetooth_1_1Manager" ],
+      [ "State", "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html", "structLibBBB_1_1Bluetooth_1_1Manager_1_1State" ]
+    ] ],
+    [ "BluetoothServer.cpp", "BluetoothServer_8cpp.html", null ],
+    [ "BluetoothServer.h", "BluetoothServer_8h.html", null ],
     [ "Input.cpp", "Input_8cpp.html", "Input_8cpp" ],
     [ "Input.h", "Input_8h.html", [
       [ "Input", "classLibBBB_1_1IO_1_1Input.html", "classLibBBB_1_1IO_1_1Input" ],

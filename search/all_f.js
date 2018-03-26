@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['senddata',['sendData',['../classLibBBB_1_1Bluetooth_1_1Manager.html#ab5be022ea6825ad678443bfba58294fb',1,'LibBBB::Bluetooth::Manager']]],
   ['servocontrol',['ServoControl',['../classLibBBB_1_1IO_1_1ServoControl.html',1,'LibBBB::IO::ServoControl'],['../classLibBBB_1_1IO_1_1ServoControl.html#aa3b9715605e607c96eda2ec4e5514b14',1,'LibBBB::IO::ServoControl::ServoControl()']]],
   ['servocontrol_2ecpp',['ServoControl.cpp',['../ServoControl_8cpp.html',1,'']]],
   ['servocontrol_2eh',['ServoControl.h',['../ServoControl_8h.html',1,'']]],
@@ -14,7 +15,7 @@ var searchData=
   ['setprustate',['setPRUState',['../classLibBBB_1_1ManagerPRUs.html#a729866be570f7837b6e893e8ff78bb58',1,'LibBBB::ManagerPRUs']]],
   ['setpulsewidth',['setPulseWidth',['../classLibBBB_1_1IO_1_1MotorControl.html#a2caa62735bf2f443e88a9095287cbad2',1,'LibBBB::IO::MotorControl::setPulseWidth(uint32_t pulseWidth)'],['../classLibBBB_1_1IO_1_1MotorControl.html#ab1fb69041c1faa982c19e94e872a675b',1,'LibBBB::IO::MotorControl::setPulseWidth(uint32_t finalPulseWidth, uint32_t rampTime)']]],
   ['setstate',['setState',['../classLibBBB_1_1IO_1_1UserLED.html#a5d6714d1ddc854308c1d4cc5448ded07',1,'LibBBB::IO::UserLED']]],
-  ['setup',['Setup',['../structLibBBB_1_1IO_1_1Input_1_1Setup.html',1,'LibBBB::IO::Input::Setup'],['../structLibBBB_1_1IO_1_1Output_1_1Setup.html',1,'LibBBB::IO::Output::Setup'],['../structLibBBB_1_1IO_1_1UserLED_1_1Setup.html',1,'LibBBB::IO::UserLED::Setup'],['../structLibBBB_1_1IO_1_1Input_1_1Setup.html#a1ad926b46c1818dd934b0b99ddb63386',1,'LibBBB::IO::Input::Setup::Setup()'],['../structLibBBB_1_1IO_1_1Output_1_1Setup.html#ac7d4ee82c7eabd07ba140ec061c28adc',1,'LibBBB::IO::Output::Setup::Setup()'],['../structLibBBB_1_1IO_1_1UserLED_1_1Setup.html#a25c259e98aa65d6594d0031eb0463b01',1,'LibBBB::IO::UserLED::Setup::Setup()']]],
+  ['setup',['Setup',['../structLibBBB_1_1IO_1_1UserLED_1_1Setup.html',1,'LibBBB::IO::UserLED::Setup'],['../structLibBBB_1_1IO_1_1Output_1_1Setup.html',1,'LibBBB::IO::Output::Setup'],['../structLibBBB_1_1IO_1_1Input_1_1Setup.html',1,'LibBBB::IO::Input::Setup'],['../structLibBBB_1_1IO_1_1Input_1_1Setup.html#a1ad926b46c1818dd934b0b99ddb63386',1,'LibBBB::IO::Input::Setup::Setup()'],['../structLibBBB_1_1IO_1_1Output_1_1Setup.html#ac7d4ee82c7eabd07ba140ec061c28adc',1,'LibBBB::IO::Output::Setup::Setup()'],['../structLibBBB_1_1IO_1_1UserLED_1_1Setup.html#a25c259e98aa65d6594d0031eb0463b01',1,'LibBBB::IO::UserLED::Setup::Setup()']]],
   ['setvalue',['setValue',['../classLibBBB_1_1IO_1_1Output.html#a6ae67445b434b37d11e75cb0391e0b3f',1,'LibBBB::IO::Output']]],
   ['seven',['Seven',['../structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html#ac9b3074b7855064180774d7d5bfe1372a3f13fbe9ccbc73834a7bc896d8862350',1,'LibBBB::IO::MotorControl::Motor']]],
   ['sharedmemorypointer',['sharedMemoryPointer',['../classLibBBB_1_1ManagerPRUs.html#ac7083cbae7bd9823bedd94d6bd43d50f',1,'LibBBB::ManagerPRUs::sharedMemoryPointer()'],['../classLibBBB_1_1ManagerPRUs.html#a0f5814d0d6e0b2b91039d63f31defab2',1,'LibBBB::ManagerPRUs::sharedMemoryPointer() const']]],
@@ -22,5 +23,6 @@ var searchData=
   ['startdetachedthread',['startDetachedThread',['../classLibBBB_1_1ThreadHelper.html#a6999e18135496ef252b1c43c374c20f9',1,'LibBBB::ThreadHelper']]],
   ['startjoinablethread',['startJoinableThread',['../classLibBBB_1_1ThreadHelper.html#a068eff4b68a89c09c63d8780621b431a',1,'LibBBB::ThreadHelper']]],
   ['startroutine',['StartRoutine',['../classLibBBB_1_1ThreadHelper.html#a4594b59704ac41cd113bb39d68731b1a',1,'LibBBB::ThreadHelper']]],
-  ['state',['State',['../structLibBBB_1_1IO_1_1UserLED_1_1State.html',1,'LibBBB::IO::UserLED::State'],['../classLibBBB_1_1IO_1_1UserLED.html#a98c0a865b590a4149e3b5a8d8c97d6cd',1,'LibBBB::IO::UserLED::state() const']]]
+  ['state',['State',['../structLibBBB_1_1IO_1_1UserLED_1_1State.html',1,'LibBBB::IO::UserLED::State'],['../structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html',1,'LibBBB::Bluetooth::Manager::State'],['../classLibBBB_1_1IO_1_1UserLED.html#a98c0a865b590a4149e3b5a8d8c97d6cd',1,'LibBBB::IO::UserLED::state()']]],
+  ['statechange',['stateChange',['../classLibBBB_1_1Bluetooth_1_1Manager.html#a8232890675f708fb8f08735375259d5e',1,'LibBBB::Bluetooth::Manager::stateChange()'],['../classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html#a4d89d1228bf44378c0caf37fddac40dc',1,'LibBBB::Bluetooth::Manager::Interface::stateChange()']]]
 ];

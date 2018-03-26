@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cnt_5foffset',['CNT_OFFSET',['../PRUDefinitions_8h.html#a40f7e656758a0c6789535c6fb1531ca0',1,'PRUDefinitions.h']]]
+  ['beagleblue',['BeagleBlue',['../BluetoothDefinitions_8h.html#a0b0f56aa6dd85a933a745d6fe4934aca',1,'BluetoothDefinitions.h']]],
+  ['beaglebluebluetoothaddress',['BeagleBlueBluetoothAddress',['../BluetoothDefinitions_8h.html#ab8e857e740d3878ff22556bca0a25542',1,'BluetoothDefinitions.h']]]
 ];

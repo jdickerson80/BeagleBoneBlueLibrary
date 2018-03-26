@@ -1,6 +1,7 @@
 <map id="ThreadHelper.h" name="ThreadHelper.h">
-<area shape="rect" id="node2" href="$Input_8cpp.html" title="Input.cpp" alt="" coords="5,81,82,109"/>
-<area shape="rect" id="node3" href="$UserLED_8cpp.html" title="UserLED.cpp" alt="" coords="105,81,206,109"/>
-<area shape="rect" id="node4" href="$MotorControl_8cpp.html" title="MotorControl.cpp" alt="" coords="230,81,353,109"/>
-<area shape="rect" id="node5" href="$ThreadHelper_8cpp.html" title="ThreadHelper.cpp" alt="" coords="377,81,505,109"/>
+<area shape="rect" id="node2" href="$BluetoothManager_8cpp.html" title="BluetoothManager.cpp" alt="" coords="5,81,161,109"/>
+<area shape="rect" id="node3" href="$Input_8cpp.html" title="Input.cpp" alt="" coords="185,81,261,109"/>
+<area shape="rect" id="node4" href="$UserLED_8cpp.html" title="UserLED.cpp" alt="" coords="285,81,385,109"/>
+<area shape="rect" id="node5" href="$MotorControl_8cpp.html" title="MotorControl.cpp" alt="" coords="409,81,533,109"/>
+<area shape="rect" id="node6" href="$ThreadHelper_8cpp.html" title="ThreadHelper.cpp" alt="" coords="556,81,684,109"/>
 </map>

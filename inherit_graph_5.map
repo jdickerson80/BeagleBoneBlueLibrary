@@ -1,4 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classLibBBB_1_1IO_1_1MotorControl.html" title="The MotorControl class controls a PRU controlled servo. It handles all control of the servo via this ..." alt="" coords="5,5,177,33"/>
-<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1ServoControl.html" title="The ServoControl class controls a servo motor. For convenience, this class adds API to control the se..." alt="" coords="225,5,398,33"/>
+<area shape="rect" id="node1" href="$classLibBBB_1_1IO_1_1IOBase.html" title="The IOBase class is the base class for all GPIO. This class contains all of the methods to call into ..." alt="" coords="5,32,144,60"/>
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1Input.html" title="The Input class represents a GPIO pin that is set up as an input. This class allows the user to add a..." alt="" coords="198,5,322,33"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1Output.html" title="The Output class represents a GPIO pin that is set up as an output. This class has the ability to tog..." alt="" coords="192,57,327,85"/>
 </map>

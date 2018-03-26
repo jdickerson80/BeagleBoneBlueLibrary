@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['seven',['Seven',['../structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html#ac9b3074b7855064180774d7d5bfe1372a3f13fbe9ccbc73834a7bc896d8862350',1,'LibBBB::IO::MotorControl::Motor']]],
-  ['six',['Six',['../structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html#ac9b3074b7855064180774d7d5bfe1372a3d9fce0c7ea3ea0a079542db3913ff3b',1,'LibBBB::IO::MotorControl::Motor']]]
+  ['red',['Red',['../structLibBBB_1_1IO_1_1UserLED_1_1LED.html#aea1c3430eab2684e6567550c21c16ba0ac11bbe459556ed4a4c1644811ef6e910',1,'LibBBB::IO::UserLED::LED']]],
+  ['rising',['Rising',['../structLibBBB_1_1IO_1_1Input_1_1Edge.html#a72e10b0719bf2d5fac5723efd655508ba2a480988c956ebaa76c28c28f30ee1ff',1,'LibBBB::IO::Input::Edge']]]
 ];

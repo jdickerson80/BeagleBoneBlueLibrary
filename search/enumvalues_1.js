@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['eight',['Eight',['../structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html#ac9b3074b7855064180774d7d5bfe1372a044765a7cd78940091c854cbd9991bcc',1,'LibBBB::IO::MotorControl::Motor']]]
+  ['connected',['Connected',['../structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba94e78fb853397369855b8e1ce02cb2b5',1,'LibBBB::Bluetooth::Manager::State']]],
+  ['connecting',['Connecting',['../structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba5f833a8528e1ef72f5bf36a9e1316942',1,'LibBBB::Bluetooth::Manager::State']]]
 ];
