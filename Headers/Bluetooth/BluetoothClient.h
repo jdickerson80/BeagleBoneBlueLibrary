@@ -31,7 +31,6 @@
 //	void handleConnectionLoss();
 //	static void* tryToConnectToServer( void* input );
 //};
-
 //} // namespace Bluetooth
 //} // namespace LibBBB
 //#endif // BLUETOOTHCLIENT_H
