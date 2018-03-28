@@ -109,15 +109,15 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a45351ad3dd38356327e9b4785874fdff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a45351ad3dd38356327e9b4785874fdff">Manager</a> (const std::string &amp;peerAddress, const std::string &amp;localAddress, <a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html">Interface</a> *listenerObject, <a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a8232890675f708fb8f08735375259d5e">stateChange</a> listenerMethod)</td></tr>
-<tr class="memdesc:a45351ad3dd38356327e9b4785874fdff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base constructor.  <a href="#a45351ad3dd38356327e9b4785874fdff">More...</a><br /></td></tr>
-<tr class="separator:a45351ad3dd38356327e9b4785874fdff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ed342b2cadc7bb8577d9153743f390"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a32ed342b2cadc7bb8577d9153743f390">Manager</a> (const std::string &amp;peerAddress, const std::string &amp;localAddress, <a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html">Interface</a> *listenerObject, <a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a8232890675f708fb8f08735375259d5e">stateChange</a> listenerMethod, uint32_t receiveMessageSize, uint32_t sendMessageSize, uint32_t pollRate)</td></tr>
+<tr class="memdesc:a32ed342b2cadc7bb8577d9153743f390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base constructor.  <a href="#a32ed342b2cadc7bb8577d9153743f390">More...</a><br /></td></tr>
+<tr class="separator:a32ed342b2cadc7bb8577d9153743f390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af13eb74e395726bc9446200549d4a06d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#af13eb74e395726bc9446200549d4a06d">~Manager</a> ()</td></tr>
 <tr class="separator:af13eb74e395726bc9446200549d4a06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5be022ea6825ad678443bfba58294fb"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#ab5be022ea6825ad678443bfba58294fb">sendData</a> (const uint8_t *const data, uint8_t sizeOfMessage)</td></tr>
-<tr class="separator:ab5be022ea6825ad678443bfba58294fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeb866a806df04176dc152b157907fe9"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#abeb866a806df04176dc152b157907fe9">receiveData</a> (uint8_t *const data, uint8_t sizeOfMessage)</td></tr>
-<tr class="separator:abeb866a806df04176dc152b157907fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f93bbcf746ab55eaf46ad12451e24fa"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a2f93bbcf746ab55eaf46ad12451e24fa">sendData</a> (const uint8_t *const data)</td></tr>
+<tr class="separator:a2f93bbcf746ab55eaf46ad12451e24fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060493f898621db59bfda9b7077d759c"><td class="memItemLeft" align="right" valign="top">const uint8_t *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a060493f898621db59bfda9b7077d759c">receiveData</a> () const</td></tr>
+<tr class="separator:a060493f898621db59bfda9b7077d759c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba77bfc05cca940e709d9c0bb1106127"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#aba77bfc05cca940e709d9c0bb1106127">isConnected</a> () const</td></tr>
 <tr class="separator:aba77bfc05cca940e709d9c0bb1106127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -143,8 +143,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a45351ad3dd38356327e9b4785874fdff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45351ad3dd38356327e9b4785874fdff">&#9670;&nbsp;</a></span>Manager()</h2>
+<a id="a32ed342b2cadc7bb8577d9153743f390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32ed342b2cadc7bb8577d9153743f390">&#9670;&nbsp;</a></span>Manager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +171,25 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a8232890675f708fb8f08735375259d5e">stateChange</a>&#160;</td>
-          <td class="paramname"><em>listenerMethod</em>&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>receiveMessageSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>sendMessageSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>pollRate</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -190,11 +208,6 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00012">12</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classLibBBB_1_1Bluetooth_1_1Manager_a45351ad3dd38356327e9b4785874fdff_cgraph.svg" width="351" height="55"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>
@@ -213,7 +226,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00054">54</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00052">52</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -233,47 +246,37 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00109">109</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00099">99</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classLibBBB_1_1Bluetooth_1_1Manager_aba77bfc05cca940e709d9c0bb1106127_cgraph.svg" width="370" height="55"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
-<a id="abeb866a806df04176dc152b157907fe9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abeb866a806df04176dc152b157907fe9">&#9670;&nbsp;</a></span>receiveData()</h2>
+<a id="a060493f898621db59bfda9b7077d759c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a060493f898621db59bfda9b7077d759c">&#9670;&nbsp;</a></span>receiveData()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ssize_t LibBBB::Bluetooth::Manager::receiveData </td>
+          <td class="memname">const uint8_t *const LibBBB::Bluetooth::Manager::receiveData </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *const&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>sizeOfMessage</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00089">89</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classLibBBB_1_1Bluetooth_1_1Manager_abeb866a806df04176dc152b157907fe9_cgraph.svg" width="366" height="55"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00088">88</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ab5be022ea6825ad678443bfba58294fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5be022ea6825ad678443bfba58294fb">&#9670;&nbsp;</a></span>sendData()</h2>
+<a id="a2f93bbcf746ab55eaf46ad12451e24fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f93bbcf746ab55eaf46ad12451e24fa">&#9670;&nbsp;</a></span>sendData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,28 +285,13 @@ Here is the call graph for this function:</div>
           <td class="memname">ssize_t LibBBB::Bluetooth::Manager::sendData </td>
           <td>(</td>
           <td class="paramtype">const uint8_t *const&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>sizeOfMessage</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00066">66</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classLibBBB_1_1Bluetooth_1_1Manager_ab5be022ea6825ad678443bfba58294fb_cgraph.svg" width="352" height="55"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00076">76</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['senddata',['sendData',['../classLibBBB_1_1Bluetooth_1_1Manager.html#ab5be022ea6825ad678443bfba58294fb',1,'LibBBB::Bluetooth::Manager']]],
+  ['senddata',['sendData',['../classLibBBB_1_1Bluetooth_1_1Manager.html#a2f93bbcf746ab55eaf46ad12451e24fa',1,'LibBBB::Bluetooth::Manager']]],
   ['servocontrol',['ServoControl',['../classLibBBB_1_1IO_1_1ServoControl.html',1,'LibBBB::IO::ServoControl'],['../classLibBBB_1_1IO_1_1ServoControl.html#aa3b9715605e607c96eda2ec4e5514b14',1,'LibBBB::IO::ServoControl::ServoControl()']]],
   ['servocontrol_2ecpp',['ServoControl.cpp',['../ServoControl_8cpp.html',1,'']]],
   ['servocontrol_2eh',['ServoControl.h',['../ServoControl_8h.html',1,'']]],
