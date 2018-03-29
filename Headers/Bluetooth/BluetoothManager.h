@@ -40,6 +40,7 @@ public:
 private:
 
 	bool _receiveThreadRunning;
+	bool _sendCondition;
 	bool _sendThreadRunning;
 	bool _setupThreadRunning;
 
@@ -50,6 +51,9 @@ private:
 	pthread_t _receiveThread;
 	pthread_t _sendThread;
 	pthread_t _setupThread;
+
+	pthread_cond_t _conditionalVariable;
+	pthread_mutex_t _mutex;
 
 	uint32_t _pollRate;
 	uint32_t _receiveMessageSize;
@@ -107,9 +111,6 @@ private:
 	void startSendAndReceiveThreads();
 
 	void stopSendAndReceiveThreads();
-
-//	static void* connectClient( void* input );
-
 };
 
 } // namespace Bluetooth

@@ -17,6 +17,7 @@ Manager::Manager( const std::string& peerAddress
 				  , uint32_t sendMessageSize
 				  , uint32_t pollRate )
 	: _receiveThreadRunning( false )
+	, _sendCondition( false )
 	, _sendThreadRunning( false )
 	, _setupThreadRunning( false )
 	, _socket( 0 )
@@ -46,6 +47,11 @@ Manager::Manager( const std::string& peerAddress
 
 	printf( "const size %i\n", _receiveMessageSize * sizeof( uint8_t ) );
 
+	_mutex = PTHREAD_MUTEX_INITIALIZER;
+	_conditionalVariable = PTHREAD_COND_INITIALIZER;
+//	pthread_mutex_init( &_mutex, NULL );
+//	pthread_cond_init( &_conditionalVariable, NULL );
+
 	startSetupThread();
 }
 
@@ -66,6 +72,7 @@ Manager::~Manager()
 		pthread_cancel( this->_setupThread );
 	}
 
+	pthread_mutex_destroy( &_mutex );
 	close( _socket );
 	delete _localAddress;
 	delete _peerAddress;
@@ -73,7 +80,7 @@ Manager::~Manager()
 	delete _sendMessageBuffer;
 }
 
-ssize_t Manager::sendData( const uint8_t * const data )
+ssize_t Manager::sendData( const uint8_t* const data )
 {
 	if ( _currentState != State::Connected )
 	{
@@ -81,7 +88,11 @@ ssize_t Manager::sendData( const uint8_t * const data )
 		return -1;
 	}
 
+	pthread_mutex_lock( &_mutex );
 	memcpy( (void*)_sendMessageBuffer, data, _sendMessageSize );
+	_sendCondition = true;
+	pthread_mutex_unlock( &_mutex );
+	pthread_cond_signal( &_conditionalVariable );
 	return 1;
 }
 
@@ -191,11 +202,19 @@ void* Manager::sendMessage( void* input )
 {
 	Manager* manager = static_cast< Manager* >( input );
 	uint32_t messageSize = manager->_sendMessageSize;
+	pthread_cond_t* conditionalVariable = &manager->_conditionalVariable;
+	pthread_mutex_t* mutex = &manager->_mutex;
 
 	while ( manager->_sendThreadRunning )
 	{
+		pthread_mutex_lock( mutex );
+		while ( !manager->_sendCondition )
+		{
+			pthread_cond_wait( conditionalVariable, mutex );
+		}
 		ssize_t result = send( manager->_socket, (void*)manager->_sendMessageBuffer, messageSize, 0 );
-
+		manager->_sendCondition = false;
+		pthread_mutex_unlock( mutex );
 		//	int err = errno;
 
 		printf("send error %s size %i\n", strerror( errno ), result );
@@ -226,6 +245,16 @@ void Manager::startSendAndReceiveThreads()
 
 void Manager::stopSendAndReceiveThreads()
 {
+	if ( this->_receiveThreadRunning )
+	{
+		pthread_cancel( this->_receiveThread );
+	}
+
+	if ( this->_sendThreadRunning )
+	{
+		pthread_cancel( this->_sendThread );
+	}
+
 	_receiveThreadRunning = false;
 	_sendThreadRunning = false;
 }
