@@ -128,7 +128,6 @@ void MotorControl::setPulseWidth( uint32_t finalPulseWidth, uint32_t rampTime )
 	 *				   numberOfThreadLoops  <-- number of times the thread will run for the ramp
 	 */
 	_rampRate = pulseDelta / (int32_t)numberOfThreadLoops;
-	printf("loop number is %i set ramp rate to %d delta is %d cur is %u final is %u ", numberOfThreadLoops, _rampRate, pulseDelta, currentPulseWidth, _finalRampedPulseWidth );
 
 	/**
 	 * This variable represents the pulse width that will not be achieved by the
@@ -144,7 +143,6 @@ void MotorControl::setPulseWidth( uint32_t finalPulseWidth, uint32_t rampTime )
 	 * of the first pulse being a different adder than the rest.
 	 */
 	int32_t remainderPulses = finalPulseWidth - ( currentPulseWidth + ( numberOfThreadLoops * _rampRate ) );
-	printf("rem is %i setting width of %d\n", remainderPulses, remainderPulses + currentPulseWidth );
 
 	// FINALLY, set the first pulse width of the ramp
 	setPulseWidth( currentPulseWidth + remainderPulses );
