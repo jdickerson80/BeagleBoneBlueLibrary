@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('classLibBBB_1_1Bluetooth_1_1Manager.ht
 </div><!--header-->
 <div class="contents">
 
-<p>The BluetoothManager class is the base class for the bluetooth client and server. This class contains helper methods to start threads, client address, and the socket. This class will take the string version of the client address, and turn it into the bluetooth address used in RFCOMM.  
+<p>The BluetoothManager class manages the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> connection. It puts the socket into listen mode to connect to the remote device, and creates a read and write thread to handle sending and receiving data across the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> connection. This class also has a mutex and conditional variable to handle the race condition of the send buffer.  
  <a href="classLibBBB_1_1Bluetooth_1_1Manager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="BluetoothManager_8h_source.html">BluetoothManager.h</a>&gt;</code></p>
@@ -98,8 +98,10 @@ $(document).ready(function(){initNavTree('classLibBBB_1_1Bluetooth_1_1Manager.ht
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html">Interface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html" title="The Manager::Interface class is the abstract class that represents the interface to the Bluetooth man...">Manager::Interface</a> class is the abstract class that represents the interface to the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> manager. This class should be inherited by any class that wishes to get events from the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> manager.  <a href="classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html">State</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html" title="The State struct represents the state of the Bluetooth connection. ">State</a> struct represents the state of the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> connection.  <a href="structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -109,22 +111,26 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a32ed342b2cadc7bb8577d9153743f390"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a32ed342b2cadc7bb8577d9153743f390">Manager</a> (const std::string &amp;peerAddress, const std::string &amp;localAddress, <a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html">Interface</a> *listenerObject, <a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a8232890675f708fb8f08735375259d5e">stateChange</a> listenerMethod, uint32_t receiveMessageSize, uint32_t sendMessageSize, uint32_t pollRate)</td></tr>
-<tr class="memdesc:a32ed342b2cadc7bb8577d9153743f390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base constructor.  <a href="#a32ed342b2cadc7bb8577d9153743f390">More...</a><br /></td></tr>
-<tr class="separator:a32ed342b2cadc7bb8577d9153743f390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae004b4701f383a22e0b9cb1093f579bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#ae004b4701f383a22e0b9cb1093f579bb">Manager</a> (const std::string &amp;peerAddress, const std::string &amp;localAddress, uint32_t receiveMessageSize, uint32_t sendMessageSize, uint32_t pollRate, <a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html">Interface</a> *listenerObject=NULL, <a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a8232890675f708fb8f08735375259d5e">stateChange</a> listenerMethod=NULL)</td></tr>
+<tr class="memdesc:ae004b4701f383a22e0b9cb1093f579bb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html" title="The BluetoothManager class manages the Bluetooth connection. It puts the socket into listen mode to c...">Manager</a> creates an instance of the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> manager.  <a href="#ae004b4701f383a22e0b9cb1093f579bb">More...</a><br /></td></tr>
+<tr class="separator:ae004b4701f383a22e0b9cb1093f579bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af13eb74e395726bc9446200549d4a06d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#af13eb74e395726bc9446200549d4a06d">~Manager</a> ()</td></tr>
+<tr class="memdesc:af13eb74e395726bc9446200549d4a06d"><td class="mdescLeft">&#160;</td><td class="mdescRight">~Manager do nothing destructor  <a href="#af13eb74e395726bc9446200549d4a06d">More...</a><br /></td></tr>
 <tr class="separator:af13eb74e395726bc9446200549d4a06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f93bbcf746ab55eaf46ad12451e24fa"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a2f93bbcf746ab55eaf46ad12451e24fa">sendData</a> (const uint8_t *const data)</td></tr>
+<tr class="memdesc:a2f93bbcf746ab55eaf46ad12451e24fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">sendData method that sends the data over the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> connection  <a href="#a2f93bbcf746ab55eaf46ad12451e24fa">More...</a><br /></td></tr>
 <tr class="separator:a2f93bbcf746ab55eaf46ad12451e24fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a060493f898621db59bfda9b7077d759c"><td class="memItemLeft" align="right" valign="top">const uint8_t *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a060493f898621db59bfda9b7077d759c">receiveData</a> () const</td></tr>
+<tr class="memdesc:a060493f898621db59bfda9b7077d759c"><td class="mdescLeft">&#160;</td><td class="mdescRight">receiveData method that receives the data  <a href="#a060493f898621db59bfda9b7077d759c">More...</a><br /></td></tr>
 <tr class="separator:a060493f898621db59bfda9b7077d759c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba77bfc05cca940e709d9c0bb1106127"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#aba77bfc05cca940e709d9c0bb1106127">isConnected</a> () const</td></tr>
+<tr class="memdesc:aba77bfc05cca940e709d9c0bb1106127"><td class="mdescLeft">&#160;</td><td class="mdescRight">isConnected getter  <a href="#aba77bfc05cca940e709d9c0bb1106127">More...</a><br /></td></tr>
 <tr class="separator:aba77bfc05cca940e709d9c0bb1106127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The BluetoothManager class is the base class for the bluetooth client and server. This class contains helper methods to start threads, client address, and the socket. This class will take the string version of the client address, and turn it into the bluetooth address used in RFCOMM. </p>
+<div class="textblock"><p>The BluetoothManager class manages the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> connection. It puts the socket into listen mode to connect to the remote device, and creates a read and write thread to handle sending and receiving data across the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> connection. This class also has a mutex and conditional variable to handle the race condition of the send buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8h_source.html#l00021">21</a> of file <a class="el" href="BluetoothManager_8h_source.html">BluetoothManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8h_source.html#l00023">23</a> of file <a class="el" href="BluetoothManager_8h_source.html">BluetoothManager.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a8232890675f708fb8f08735375259d5e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8232890675f708fb8f08735375259d5e">&#9670;&nbsp;</a></span>stateChange</h2>
@@ -138,13 +144,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8h_source.html#l00038">38</a> of file <a class="el" href="BluetoothManager_8h_source.html">BluetoothManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8h_source.html#l00046">46</a> of file <a class="el" href="BluetoothManager_8h_source.html">BluetoothManager.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a32ed342b2cadc7bb8577d9153743f390"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32ed342b2cadc7bb8577d9153743f390">&#9670;&nbsp;</a></span>Manager()</h2>
+<a id="ae004b4701f383a22e0b9cb1093f579bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae004b4701f383a22e0b9cb1093f579bb">&#9670;&nbsp;</a></span>Manager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,18 +170,6 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html">Interface</a> *&#160;</td>
-          <td class="paramname"><em>listenerObject</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a8232890675f708fb8f08735375259d5e">stateChange</a>&#160;</td>
-          <td class="paramname"><em>listenerMethod</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>receiveMessageSize</em>, </td>
         </tr>
@@ -189,7 +183,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>pollRate</em>&#160;</td>
+          <td class="paramname"><em>pollRate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html">Interface</a> *&#160;</td>
+          <td class="paramname"><em>listenerObject</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a8232890675f708fb8f08735375259d5e">stateChange</a>&#160;</td>
+          <td class="paramname"><em>listenerMethod</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -199,10 +205,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Base constructor. </p>
+<p><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html" title="The BluetoothManager class manages the Bluetooth connection. It puts the socket into listen mode to c...">Manager</a> creates an instance of the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> manager. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">peerAddress</td><td>address of the device that this code is connected. </td></tr>
+    <tr><td class="paramname">peerAddress</td><td>address of the remote device </td></tr>
+    <tr><td class="paramname">localAddress</td><td>address of this device </td></tr>
+    <tr><td class="paramname">receiveMessageSize</td><td>size of the receive message </td></tr>
+    <tr><td class="paramname">sendMessageSize</td><td>size of the send message </td></tr>
+    <tr><td class="paramname">pollRate</td><td>send and receive rate </td></tr>
+    <tr><td class="paramname">listenerObject</td><td>pointer to the interface </td></tr>
+    <tr><td class="paramname">listenerMethod</td><td>pointer to the interface's method </td></tr>
   </table>
   </dd>
 </dl>
@@ -226,7 +238,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00058">58</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<p>~Manager do nothing destructor </p>
+
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00059">59</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -246,7 +260,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00110">110</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<p>isConnected getter </p>
+<dl class="section return"><dt>Returns</dt><dd>true if connected, false if it is not </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00130">130</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -270,7 +287,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00099">99</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<p>receiveData method that receives the data </p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to the data. If there is no new data or the connection is down, NULL is returned. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00117">117</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -290,7 +310,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00083">83</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<p>sendData method that sends the data over the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> connection </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>to be sent </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>?? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>remove the return or make it usefull </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00091">91</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 
 </div>
 </div>

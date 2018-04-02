@@ -12,7 +12,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html" target="_top" xlink:title="The BluetoothManager class is the base class for the bluetooth client and server. This class contains...">
+<g id="a_node1"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html" target="_top" xlink:title="The BluetoothManager class manages the Bluetooth connection. It puts the socket into listen mode to c...">
 <polygon fill="#ffffff" stroke="#000000" points="0,-.5 0,-32.5 102.701,-32.5 102.701,-.5 0,-.5"/>
 <text text-anchor="start" x="8" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::Bluetooth::</text>
 <text text-anchor="middle" x="51.3505" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Manager</text>

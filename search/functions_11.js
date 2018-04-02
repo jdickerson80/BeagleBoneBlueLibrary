@@ -1,7 +1,7 @@
 var searchData=
 [
+  ['_7e_20interface',['~ Interface',['../classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html#a3b0dde827c1a19357f6597fc1098b42f',1,'LibBBB::Bluetooth::Manager::Interface']]],
   ['_7einput',['~Input',['../classLibBBB_1_1IO_1_1Input.html#ab70913a918406a621c8a4d1778917f03',1,'LibBBB::IO::Input']]],
-  ['_7einterface',['~Interface',['../classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html#a41fa850b8fa9d6f9c30dc272d9328a5f',1,'LibBBB::Bluetooth::Manager::Interface']]],
   ['_7eiobase',['~IOBase',['../classLibBBB_1_1IO_1_1IOBase.html#a250c3adf419e8e3b31d21bb1d264da0f',1,'LibBBB::IO::IOBase']]],
   ['_7emanager',['~Manager',['../classLibBBB_1_1Bluetooth_1_1Manager.html#af13eb74e395726bc9446200549d4a06d',1,'LibBBB::Bluetooth::Manager']]],
   ['_7emanagerprus',['~ManagerPRUs',['../classLibBBB_1_1ManagerPRUs.html#a7fbe7c2e844d8bfa25cab6cec5065f95',1,'LibBBB::ManagerPRUs']]],

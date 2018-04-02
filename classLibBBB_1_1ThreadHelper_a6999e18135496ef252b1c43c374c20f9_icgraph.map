@@ -1,5 +1,5 @@
 <map id="LibBBB::ThreadHelper::startDetachedThread" name="LibBBB::ThreadHelper::startDetachedThread">
-<area shape="rect" id="node2" href="$classLibBBB_1_1Bluetooth_1_1Manager.html#aba77bfc05cca940e709d9c0bb1106127" title="LibBBB::Bluetooth::\lManager::isConnected" alt="" coords="216,5,372,49"/>
+<area shape="rect" id="node2" href="$classLibBBB_1_1Bluetooth_1_1Manager.html#aba77bfc05cca940e709d9c0bb1106127" title="isConnected getter " alt="" coords="216,5,372,49"/>
 <area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1Input.html#a3a448ebc4e13f3813b6b80566af3fe79" title="waitForEdgeThreaded does the same thing as waitForEdge(), but does so in a threaded manner..." alt="" coords="217,73,370,117"/>
 <area shape="rect" id="node6" href="$classLibBBB_1_1IO_1_1MotorControl.html#a55cb5ace57f63ba73e679b5f79c3459a" title="MotorControl ServoControl constructor creates the class, and spawns the frequency control thread..." alt="" coords="208,141,380,185"/>
 <area shape="rect" id="node7" href="$classLibBBB_1_1IO_1_1UserLED.html#a5d6714d1ddc854308c1d4cc5448ded07" title="setState method sets the state of the LED " alt="" coords="220,209,368,253"/>

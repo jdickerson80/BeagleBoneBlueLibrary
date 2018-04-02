@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['manager',['Manager',['../classLibBBB_1_1Bluetooth_1_1Manager.html',1,'LibBBB::Bluetooth::Manager'],['../classLibBBB_1_1Bluetooth_1_1Manager.html#a32ed342b2cadc7bb8577d9153743f390',1,'LibBBB::Bluetooth::Manager::Manager()']]],
+  ['manager',['Manager',['../classLibBBB_1_1Bluetooth_1_1Manager.html',1,'LibBBB::Bluetooth::Manager'],['../classLibBBB_1_1Bluetooth_1_1Manager.html#ae004b4701f383a22e0b9cb1093f579bb',1,'LibBBB::Bluetooth::Manager::Manager()']]],
   ['managerprus',['ManagerPRUs',['../classLibBBB_1_1ManagerPRUs.html',1,'LibBBB']]],
   ['managerprus_2ecpp',['ManagerPRUs.cpp',['../ManagerPRUs_8cpp.html',1,'']]],
   ['managerprus_2eh',['ManagerPRUs.h',['../ManagerPRUs_8h.html',1,'']]],
