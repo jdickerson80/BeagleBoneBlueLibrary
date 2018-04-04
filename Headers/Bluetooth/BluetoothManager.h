@@ -47,13 +47,13 @@ public:
 
 private:
 
-	// flags for the threads running state
+	// flags for the threads' status
 	bool _receiveThreadRunning;
 	bool _sendCondition;
 	bool _sendThreadRunning;
 	bool _setupThreadRunning;
 
-	// FD for the client
+	// file descriptor for the socket
 	int _socket;
 
 	// pthread instances
