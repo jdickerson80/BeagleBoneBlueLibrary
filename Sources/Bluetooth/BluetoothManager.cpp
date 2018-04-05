@@ -141,7 +141,7 @@ void* Manager::receiveMessage( void* input )
 	while ( manager->_receiveThreadRunning )
 	{
 		// recieve the message
-		ssize_t result = recv( manager->_socket, (void*)manager->_receiveMessageBuffer, messageSize, 0 );
+		recv( manager->_socket, (void*)manager->_receiveMessageBuffer, messageSize, 0 );
 
 		// check if the socket is still connected
 		if ( errno == ENOTCONN )
@@ -155,17 +155,6 @@ void* Manager::receiveMessage( void* input )
 			manager->startSetupThread();
 			break;
 		}
-
-		// if the message is not the correct size, go back to the blocking
-		// recv call
-		if ( result != messageSize )
-		{
-			printf("rec: continued\n");
-			continue;
-		}
-
-		// sleep for the receive/send rate
-		usleep( manager->_pollRate );
 	}
 
 	pthread_exit( NULL );
@@ -175,6 +164,7 @@ void* Manager::receiveMessage( void* input )
 void* Manager::setupConnection( void* input )
 {
 	// init the local variables
+	static bool firstRun = true;
 	Manager* manager = static_cast< Manager* >( input );
 	unsigned int opt = sizeof( *manager->_peerAddress );
 	int returnValue = 0;
@@ -182,9 +172,11 @@ void* Manager::setupConnection( void* input )
 	Interface* listenerObject = manager->_listenerObject;
 	stateChange listenerMethod = manager->_listenerMethod;
 	manager->_currentState = State::Connecting;
+	memset( (void*)manager->_receiveMessageBuffer, 0, manager->_receiveMessageSize );
+	memset( (void*)manager->_sendMessageBuffer, 0, manager->_sendMessageSize );
 
 	// check if there is a listener object
-	if ( listenerObject )
+	if ( listenerObject && !firstRun )
 	{
 		// there is so signal the new state
 		(listenerObject->*listenerMethod)( manager->_currentState );
@@ -205,6 +197,8 @@ void* Manager::setupConnection( void* input )
 	// print address
 	ba2str( &localCopy.rc_bdaddr, buf );
 	fprintf( stdout, "Server: Local add is %s chan is %u fam is %u\n", buf, localCopy.rc_channel, localCopy.rc_family );
+
+	firstRun = false;
 
 	while ( manager->_setupThreadRunning )
 	{
