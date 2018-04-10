@@ -49,9 +49,11 @@ private:
 
 	// flags for the threads' status
 	bool _receiveThreadRunning;
-	bool _sendCondition;
 	bool _sendThreadRunning;
 	bool _setupThreadRunning;
+
+	// conditionals for pthread conditions
+	bool _sendCondition;
 
 	// file descriptor for the socket
 	int _socket;
@@ -62,8 +64,10 @@ private:
 	pthread_t _setupThread;
 
 	// mutex and conditional variable
-	pthread_cond_t _conditionalVariable;
-	pthread_mutex_t _mutex;
+	pthread_mutex_t _receiveMutex;
+
+	pthread_cond_t _sendConditionalVariable;
+	pthread_mutex_t _sendMutex;
 
 	// constants for sending and receiving
 	const uint32_t _pollRate;
@@ -122,7 +126,7 @@ public:
 	 * @return	pointer to the data. If there is no new data or the connection
 	 *			is down, NULL is returned.
 	 */
-	const uint8_t* const receiveData() const;
+	const uint8_t* const receiveData();
 
 	/**
 	 * @brief isConnected getter

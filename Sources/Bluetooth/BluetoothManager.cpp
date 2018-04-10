@@ -17,9 +17,9 @@ Manager::Manager( const std::string& peerAddress
 				  , Interface* listenerObject /* = NULL */
 				  , stateChange listenerMethod /* = NULL */ )
 	: _receiveThreadRunning( false )
-	, _sendCondition( false )
 	, _sendThreadRunning( false )
 	, _setupThreadRunning( false )
+	, _sendCondition( false )
 	, _socket( 0 )
 	, _pollRate( pollRate )
 	, _receiveMessageSize( receiveMessageSize )
@@ -49,8 +49,10 @@ Manager::Manager( const std::string& peerAddress
 	_sendMessageBuffer = (uint8_t*)malloc( _sendMessageSize * sizeof( uint8_t ) );
 
 	// init the pthread and conditional variables
-	_mutex = PTHREAD_MUTEX_INITIALIZER;
-	_conditionalVariable = PTHREAD_COND_INITIALIZER;
+	_receiveMutex = PTHREAD_MUTEX_INITIALIZER;
+
+	_sendMutex = PTHREAD_MUTEX_INITIALIZER;
+	_sendConditionalVariable = PTHREAD_COND_INITIALIZER;
 
 	// start the setup thread
 	startSetupThread();
@@ -79,7 +81,8 @@ Manager::~Manager()
 	close( _socket );
 
 	// destroy the mutex
-	pthread_mutex_destroy( &_mutex );
+	pthread_mutex_destroy( &_receiveMutex );
+	pthread_mutex_destroy( &_sendMutex );
 
 	// delete all the variables that were created by new
 	delete _localAddress;
@@ -100,7 +103,7 @@ ssize_t Manager::sendData( const uint8_t* const data )
 	}
 
 	// lock the mutex
-	pthread_mutex_lock( &_mutex );
+	pthread_mutex_lock( &_sendMutex );
 
 	// copy the desired data to be sent to the buffer
 	memcpy( (void*)_sendMessageBuffer, data, _sendMessageSize );
@@ -109,12 +112,12 @@ ssize_t Manager::sendData( const uint8_t* const data )
 	_sendCondition = true;
 
 	// unlock the mutex, and signal the contitional variable
-	pthread_mutex_unlock( &_mutex );
-	pthread_cond_signal( &_conditionalVariable );
+	pthread_mutex_unlock( &_sendMutex );
+	pthread_cond_signal( &_sendConditionalVariable );
 	return 1;
 }
 
-const uint8_t* const Manager::receiveData() const
+const uint8_t* const Manager::receiveData()
 {
 	// if the peer device is not connected, just return null
 	if ( _currentState != State::Connected )
@@ -123,8 +126,16 @@ const uint8_t* const Manager::receiveData() const
 		return NULL;
 	}
 
+	// lock the mutex
+//	pthread_mutex_lock( &_receiveMutex );
+
+	const uint8_t * const data = _receiveMessageBuffer;
+
+	// unlock the mutex
+//	pthread_mutex_unlock( &_receiveMutex );
+
 	// otherwise return the pointer to the send buffer
-	return _receiveMessageBuffer;
+	return data;
 }
 
 bool Manager::isConnected() const
@@ -136,19 +147,31 @@ void* Manager::receiveMessage( void* input )
 {
 	// get local variables
 	Manager* manager = static_cast< Manager* >( input );
-	int32_t messageSize = (int32_t)manager->_receiveMessageSize;
+	size_t messageSize = manager->_receiveMessageSize;
+	void* receiveMessageBuffer = (void*)manager->_receiveMessageBuffer;
+	void* buffer = malloc( messageSize * sizeof( uint8_t ) );
+//	pthread_mutex_t* mutex = &manager->_receiveMutex;
 
 	while ( manager->_receiveThreadRunning )
 	{
 		// recieve the message
-		recv( manager->_socket, (void*)manager->_receiveMessageBuffer, messageSize, 0 );
+		recv( manager->_socket, buffer, messageSize, 0 );
+
+		// lock the mutex
+//		pthread_mutex_lock( mutex );
+
+		// copy the desired data to be sent to the buffer
+		memcpy( receiveMessageBuffer, buffer, messageSize );
+
+		// unlock the mutex
+//		pthread_mutex_unlock( &manager->_receiveMutex );
 
 		// check if the socket is still connected
 		if ( errno == ENOTCONN )
 		{
-//			printf("rec: starting connecting thread %s\n", strerror( errno ) );
+			//			printf("rec: starting connecting thread %s\n", strerror( errno ) );
 			// peer device is not connected, so clear the buffer
-			memset( (void*)manager->_receiveMessageBuffer, 0, messageSize );
+			memset( receiveMessageBuffer, 0, messageSize );
 
 			// stop the send and receive threads and start the setup thread
 			manager->stopSendAndReceiveThreads();
@@ -157,102 +180,8 @@ void* Manager::receiveMessage( void* input )
 		}
 	}
 
+	free( buffer );
 	pthread_exit( NULL );
-	return NULL;
-}
-
-void* Manager::setupConnection( void* input )
-{
-	// init the local variables
-	static bool firstRun = true;
-	Manager* manager = static_cast< Manager* >( input );
-	unsigned int opt = sizeof( *manager->_peerAddress );
-	int returnValue = 0;
-	char buf[ 1024 ] = {0};
-	Interface* listenerObject = manager->_listenerObject;
-	stateChange listenerMethod = manager->_listenerMethod;
-	manager->_currentState = State::Connecting;
-	memset( (void*)manager->_receiveMessageBuffer, 0, manager->_receiveMessageSize );
-	memset( (void*)manager->_sendMessageBuffer, 0, manager->_sendMessageSize );
-
-	// check if there is a listener object
-	if ( listenerObject && !firstRun )
-	{
-		// there is so signal the new state
-		(listenerObject->*listenerMethod)( manager->_currentState );
-	}
-
-	// clear the variables
-	int localSocket = 0;
-	int err = 0;
-
-	// get a local copy of the addresses
-	sockaddr_rc localCopy = *manager->_localAddress;
-	sockaddr_rc peerCopy = *manager->_peerAddress;
-
-	// setup the channel
-	localCopy.rc_channel = 1;
-	peerCopy.rc_channel = 1;
-
-	// print address
-	ba2str( &localCopy.rc_bdaddr, buf );
-	fprintf( stdout, "Server: Local add is %s chan is %u fam is %u\n", buf, localCopy.rc_channel, localCopy.rc_family );
-
-	firstRun = false;
-
-	while ( manager->_setupThreadRunning )
-	{
-		// clear the variables
-		returnValue = 0;
-		manager->_socket = 0;
-		localSocket = 0;
-		err = 0;
-
-		// get the socket
-		localSocket = socket( AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM );
-
-		// bind it
-		returnValue |= bind( localSocket, (sockaddr*)&localCopy, sizeof( localCopy ) );
-
-		// check for error
-		err = errno;
-		if ( err != 0 && returnValue <= 0 )
-		{
-			// there is an error, so close the socket and try again
-			close( localSocket );
-			printf("thread error is %s %i\n", strerror( err ), localSocket );
-			sleep( 3 );
-			continue;
-		}
-
-		// put the socket into listen mode
-		returnValue |= listen( localSocket, 1 ) ;
-
-		// accept the connection
-		manager->_socket = accept( localSocket, (sockaddr*)&peerCopy, &opt  );
-
-		// print the peer's info
-		ba2str( &peerCopy.rc_bdaddr, buf );
-		fprintf( stdout, "Server: Peer add is %s chan is %u fam is %u\n", buf, peerCopy.rc_channel, peerCopy.rc_family );
-
-		// close the socket
-		close( localSocket );
-
-		// start the send and receive threads, and
-		// shut this thread down
-		manager->startSendAndReceiveThreads();
-		manager->_currentState = State::Connected;
-		manager->_setupThreadRunning = false;
-
-		// check if there is a listener object
-		if ( listenerObject )
-		{
-			// there is, so send the event
-			(listenerObject->*listenerMethod)( manager->_currentState );
-		}
-
-		pthread_exit( NULL );
-	}
 	return NULL;
 }
 
@@ -261,8 +190,8 @@ void* Manager::sendMessage( void* input )
 	// init the local variables
 	Manager* manager = static_cast< Manager* >( input );
 	int32_t messageSize = (int32_t)manager->_sendMessageSize;
-	pthread_cond_t* conditionalVariable = &manager->_conditionalVariable;
-	pthread_mutex_t* mutex = &manager->_mutex;
+	pthread_cond_t* conditionalVariable = &manager->_sendConditionalVariable;
+	pthread_mutex_t* mutex = &manager->_sendMutex;
 
 	while ( manager->_sendThreadRunning )
 	{
@@ -290,7 +219,7 @@ void* Manager::sendMessage( void* input )
 		// check for send errors
 		if ( result < 0 && errno != 0 )
 		{
-			printf("send: starting connecting thread\n");
+//			printf("send: starting connecting thread\n");
 			// there is an error so stop send and receive threads, and start
 			// the setup thread
 			manager->stopSendAndReceiveThreads();
@@ -302,13 +231,76 @@ void* Manager::sendMessage( void* input )
 		if ( result != messageSize )
 		{
 			// it was not, so go back to the send function to finish
-			printf("send: continued\n");
+//			printf("send: continued\n");
 			continue;
 		}
 
 		// sleep for the receive/send rate
 		usleep( manager->_pollRate );
 	}
+
+	pthread_exit( NULL );
+	return NULL;
+}
+
+void* Manager::setupConnection( void* input )
+{
+	// init the local variables
+	Manager* manager = static_cast< Manager* >( input );
+	unsigned int opt = sizeof( *manager->_peerAddress );
+	int returnValue = 0;
+//	memset( (void*)manager->_receiveMessageBuffer, 0, manager->_receiveMessageSize );
+//	memset( (void*)manager->_sendMessageBuffer, 0, manager->_sendMessageSize );
+
+	// clear the variables
+	int localSocket;
+
+	// get a local copy of the addresses
+	sockaddr_rc localCopy = *manager->_localAddress;
+	sockaddr_rc peerCopy = *manager->_peerAddress;
+
+	// setup the channel
+//	localCopy.rc_channel = 1;
+//	peerCopy.rc_channel = 1;
+
+	while ( manager->_setupThreadRunning )
+	{
+		// clear the variables
+		returnValue = 0;
+
+		// get the socket
+		localSocket = socket( AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM );
+
+		// bind it
+		returnValue |= bind( localSocket, (sockaddr*)&localCopy, sizeof( localCopy ) );
+
+		// check for error
+		if ( errno != 0 && returnValue <= 0 )
+		{
+			// there is an error, so close the socket and try again
+			close( localSocket );
+			printf("thread error is %s %i\n", strerror( errno ), localSocket );
+			sleep( 1 );
+			continue;
+		}
+
+		// put the socket into listen mode
+		returnValue |= listen( localSocket, 1 ) ;
+
+		// accept the connection
+		manager->_socket = accept( localSocket, (sockaddr*)&peerCopy, &opt  );
+
+		// close the socket
+		close( localSocket );
+
+		// start the send and receive threads, and
+		// shut this thread down
+		manager->_setupThreadRunning = false;
+		manager->startSendAndReceiveThreads();
+
+	}
+
+	pthread_exit( NULL );
 	return NULL;
 }
 
@@ -321,24 +313,31 @@ void Manager::startSendAndReceiveThreads()
 {
 	LibBBB::ThreadHelper::startDetachedThread( &_receiveThread, receiveMessage, &_receiveThreadRunning, static_cast< void* >( this ) );
 	LibBBB::ThreadHelper::startDetachedThread( &_sendThread, sendMessage, &_sendThreadRunning, static_cast< void* >( this ) );
+
+	_currentState = State::Connected;
+
+	// check if there is a listener object
+	if ( _listenerObject )
+	{
+		// there is, so send the event
+		(_listenerObject->*_listenerMethod)( _currentState );
+	}
 }
 
 void Manager::stopSendAndReceiveThreads()
 {
-	// cancel the threads
-	if ( this->_receiveThreadRunning )
-	{
-		pthread_cancel( this->_receiveThread );
-	}
-
-	if ( this->_sendThreadRunning )
-	{
-		pthread_cancel( this->_sendThread );
-	}
-
 	// set the flags to false
 	_receiveThreadRunning = false;
 	_sendThreadRunning = false;
+
+	_currentState = State::Connecting;
+
+	// check if there is a listener object
+	if ( _listenerObject )
+	{
+		// there is so signal the new state
+		(_listenerObject->*_listenerMethod)( _currentState );
+	}
 }
 
 } // namespace Bluetooth
