@@ -120,9 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f93bbcf746ab55eaf46ad12451e24fa"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a2f93bbcf746ab55eaf46ad12451e24fa">sendData</a> (const uint8_t *const data)</td></tr>
 <tr class="memdesc:a2f93bbcf746ab55eaf46ad12451e24fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">sendData method that sends the data over the <a class="el" href="namespaceLibBBB_1_1Bluetooth.html">Bluetooth</a> connection  <a href="#a2f93bbcf746ab55eaf46ad12451e24fa">More...</a><br /></td></tr>
 <tr class="separator:a2f93bbcf746ab55eaf46ad12451e24fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a060493f898621db59bfda9b7077d759c"><td class="memItemLeft" align="right" valign="top">const uint8_t *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#a060493f898621db59bfda9b7077d759c">receiveData</a> () const</td></tr>
-<tr class="memdesc:a060493f898621db59bfda9b7077d759c"><td class="mdescLeft">&#160;</td><td class="mdescRight">receiveData method that receives the data  <a href="#a060493f898621db59bfda9b7077d759c">More...</a><br /></td></tr>
-<tr class="separator:a060493f898621db59bfda9b7077d759c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae579e5664c1fa9a5cb4ed5e067f80e33"><td class="memItemLeft" align="right" valign="top">const uint8_t *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#ae579e5664c1fa9a5cb4ed5e067f80e33">receiveData</a> ()</td></tr>
+<tr class="memdesc:ae579e5664c1fa9a5cb4ed5e067f80e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">receiveData method that receives the data  <a href="#ae579e5664c1fa9a5cb4ed5e067f80e33">More...</a><br /></td></tr>
+<tr class="separator:ae579e5664c1fa9a5cb4ed5e067f80e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba77bfc05cca940e709d9c0bb1106127"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1Bluetooth_1_1Manager.html#aba77bfc05cca940e709d9c0bb1106127">isConnected</a> () const</td></tr>
 <tr class="memdesc:aba77bfc05cca940e709d9c0bb1106127"><td class="mdescLeft">&#160;</td><td class="mdescRight">isConnected getter  <a href="#aba77bfc05cca940e709d9c0bb1106127">More...</a><br /></td></tr>
 <tr class="separator:aba77bfc05cca940e709d9c0bb1106127"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,7 +240,7 @@ Public Member Functions</h2></td></tr>
 
 <p>~Manager do nothing destructor </p>
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00059">59</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00061">61</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +263,7 @@ Public Member Functions</h2></td></tr>
 <p>isConnected getter </p>
 <dl class="section return"><dt>Returns</dt><dd>true if connected, false if it is not </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00130">130</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00141">141</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -272,8 +272,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a060493f898621db59bfda9b7077d759c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a060493f898621db59bfda9b7077d759c">&#9670;&nbsp;</a></span>receiveData()</h2>
+<a id="ae579e5664c1fa9a5cb4ed5e067f80e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae579e5664c1fa9a5cb4ed5e067f80e33">&#9670;&nbsp;</a></span>receiveData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +282,7 @@ Here is the call graph for this function:</div>
           <td class="memname">const uint8_t *const LibBBB::Bluetooth::Manager::receiveData </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -290,7 +290,7 @@ Here is the call graph for this function:</div>
 <p>receiveData method that receives the data </p>
 <dl class="section return"><dt>Returns</dt><dd>pointer to the data. If there is no new data or the connection is down, NULL is returned. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00117">117</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00120">120</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -320,7 +320,7 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>?? </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>remove the return or make it usefull </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00091">91</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BluetoothManager_8cpp_source.html#l00094">94</a> of file <a class="el" href="BluetoothManager_8cpp_source.html">BluetoothManager.cpp</a>.</p>
 
 </div>
 </div>
