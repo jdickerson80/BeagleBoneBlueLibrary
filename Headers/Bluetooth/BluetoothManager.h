@@ -6,6 +6,7 @@
 #define BLUETOOTHMANAGER_H
 
 #include <string>
+#include <time.h>
 
 class sockaddr_rc;
 
@@ -48,9 +49,12 @@ public:
 private:
 
 	// flags for the threads' status
+	bool _callbackThreadRunning;
 	bool _receiveThreadRunning;
 	bool _sendThreadRunning;
 	bool _setupThreadRunning;
+
+	clock_t _receiveTime;
 
 	// conditionals for pthread conditions
 	bool _sendCondition;
@@ -59,6 +63,7 @@ private:
 	int _socket;
 
 	// pthread instances
+	pthread_t _callbackThread;
 	pthread_t _receiveThread;
 	pthread_t _sendThread;
 	pthread_t _setupThread;
@@ -170,6 +175,8 @@ private:
 	 */
 	static void* sendMessage( void* input );
 
+	static void* handleCallbacks( void* input );
+
 	/**
 	 * @brief	startSetupThread method just wraps starting the setup thread.
 	 * @note	this is purely a convenience method
@@ -182,13 +189,6 @@ private:
 	 * @note	this is purely a convenience method
 	 */
 	void startSendAndReceiveThreads();
-
-	/**
-	 * @brief	stopSendAndReceiveThreads stops the send and receive threads.
-	 *			This is used, for instance, when the peer device has been disconnected.
-	 * @note	this is purely a convenience method
-	 */
-	void stopSendAndReceiveThreads();
 };
 
 } // namespace Bluetooth
