@@ -9,45 +9,45 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 139)">
 <title>BluetoothManager.h</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-139 155.036,-139 155.036,4 -4,4"/>
-<!-- Node2 -->
+<!-- Node3 -->
 <g id="node1" class="node">
-<title>Node2</title>
+<title>Node3</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="39.7245,-114.5 39.7245,-134.5 145.7565,-134.5 145.7565,-114.5 39.7245,-114.5"/>
 <text text-anchor="middle" x="92.7405" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">BluetoothManager.h</text>
 </g>
-<!-- Node3 -->
+<!-- Node4 -->
 <g id="node2" class="node">
-<title>Node3</title>
+<title>Node4</title>
 <g id="a_node2"><a xlink:href="BluetoothInterface_8h.html" target="_top" xlink:title="BluetoothInterface.h">
 <polygon fill="#ffffff" stroke="#000000" points="0,-57.5 0,-77.5 105.481,-77.5 105.481,-57.5 0,-57.5"/>
 <text text-anchor="middle" x="52.7405" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">BluetoothInterface.h</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node3 -->
+<!-- Node3&#45;&gt;Node4 -->
 <g id="edge1" class="edge">
-<title>Node2&#45;&gt;Node3</title>
+<title>Node3&#45;&gt;Node4</title>
 <path fill="none" stroke="#191970" d="M79.7184,-105.9435C73.106,-96.5209 65.3302,-85.4404 59.8298,-77.6022"/>
 <polygon fill="#191970" stroke="#191970" points="76.98,-108.1345 85.5893,-114.3095 82.71,-104.1135 76.98,-108.1345"/>
 </g>
-<!-- Node4 -->
+<!-- Node5 -->
 <g id="node3" class="node">
-<title>Node4</title>
+<title>Node5</title>
 <g id="a_node3"><a xlink:href="BluetoothManager_8cpp.html" target="_top" xlink:title="BluetoothManager.cpp">
 <polygon fill="#ffffff" stroke="#000000" points="34.445,-.5 34.445,-20.5 151.036,-20.5 151.036,-.5 34.445,-.5"/>
 <text text-anchor="middle" x="92.7405" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">BluetoothManager.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node4 -->
+<!-- Node3&#45;&gt;Node5 -->
 <g id="edge3" class="edge">
-<title>Node2&#45;&gt;Node4</title>
+<title>Node3&#45;&gt;Node5</title>
 <path fill="none" stroke="#191970" d="M104.1708,-105.2953C108.3759,-97.1686 112.6254,-87.4163 114.7405,-78 119.3867,-57.3156 107.8584,-33.9553 99.7927,-20.8521"/>
 <polygon fill="#191970" stroke="#191970" points="100.9844,-103.825 99.21,-114.2702 107.1108,-107.2114 100.9844,-103.825"/>
 </g>
-<!-- Node3&#45;&gt;Node4 -->
+<!-- Node4&#45;&gt;Node5 -->
 <g id="edge2" class="edge">
-<title>Node3&#45;&gt;Node4</title>
+<title>Node4&#45;&gt;Node5</title>
 <path fill="none" stroke="#191970" d="M65.7626,-48.9435C72.375,-39.5209 80.1508,-28.4404 85.6512,-20.6022"/>
 <polygon fill="#191970" stroke="#191970" points="62.771,-47.1135 59.8917,-57.3095 68.501,-51.1345 62.771,-47.1135"/>
 </g>

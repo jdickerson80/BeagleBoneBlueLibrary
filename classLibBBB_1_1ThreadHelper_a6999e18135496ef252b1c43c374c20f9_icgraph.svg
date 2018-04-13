@@ -19,10 +19,10 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#aba77bfc05cca940e709d9c0bb1106127" target="_top" xlink:title="isConnected getter ">
-<polygon fill="#ffffff" stroke="#000000" points="158.127,-153.5 158.127,-185.5 274.709,-185.5 274.709,-153.5 158.127,-153.5"/>
-<text text-anchor="start" x="166.127" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::Bluetooth::</text>
-<text text-anchor="middle" x="216.418" y="-160.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Manager::isConnected</text>
+<g id="a_node2"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#ae004b4701f383a22e0b9cb1093f579bb" target="_top" xlink:title="Manager creates an instance of the Bluetooth manager. ">
+<polygon fill="#ffffff" stroke="#000000" points="165.0675,-153.5 165.0675,-185.5 267.7685,-185.5 267.7685,-153.5 165.0675,-153.5"/>
+<text text-anchor="start" x="173.0675" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::Bluetooth::</text>
+<text text-anchor="middle" x="216.418" y="-160.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Manager::Manager</text>
 </a>
 </g>
 </g>
