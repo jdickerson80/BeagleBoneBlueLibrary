@@ -3,7 +3,7 @@ var files =
     [ "BluetoothInterface.h", "BluetoothInterface_8h.html", [
       [ "Interface", "classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html", "classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface" ]
     ] ],
-    [ "BluetoothManager.cpp", "BluetoothManager_8cpp.html", null ],
+    [ "BluetoothManager.cpp", "BluetoothManager_8cpp.html", "BluetoothManager_8cpp" ],
     [ "BluetoothManager.h", "BluetoothManager_8h.html", [
       [ "Manager", "classLibBBB_1_1Bluetooth_1_1Manager.html", "classLibBBB_1_1Bluetooth_1_1Manager" ],
       [ "State", "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html", "structLibBBB_1_1Bluetooth_1_1Manager_1_1State" ]
