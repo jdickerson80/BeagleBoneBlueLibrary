@@ -54,7 +54,7 @@ private:
 	bool _sendThreadRunning;
 	bool _setupThreadRunning;
 
-	clock_t _receiveTime;
+//	clock_t _receiveTime;
 
 	// conditionals for pthread conditions
 	bool _sendCondition;
@@ -69,7 +69,7 @@ private:
 	pthread_t _setupThread;
 
 	// mutex and conditional variable
-	pthread_mutex_t _receiveMutex;
+//	pthread_mutex_t _receiveMutex;
 
 	pthread_cond_t _sendConditionalVariable;
 	pthread_mutex_t _sendMutex;
