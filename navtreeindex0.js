@@ -3,7 +3,6 @@ var NAVTREEINDEX0 =
 "BluetoothInterface_8h.html":[4,0,0],
 "BluetoothInterface_8h_source.html":[4,0,0],
 "BluetoothManager_8cpp.html":[4,0,1],
-"BluetoothManager_8cpp.html#a9fa3782469c2a253bd0b65d6e9af5915":[4,0,1,0],
 "BluetoothManager_8cpp_source.html":[4,0,1],
 "BluetoothManager_8h.html":[4,0,2],
 "BluetoothManager_8h_source.html":[4,0,2],

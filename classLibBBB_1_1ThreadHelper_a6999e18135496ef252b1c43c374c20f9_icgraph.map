@@ -1,11 +1,10 @@
 <map id="LibBBB::ThreadHelper::startDetachedThread" name="LibBBB::ThreadHelper::startDetachedThread">
 <area shape="rect" id="node2" href="$classLibBBB_1_1Bluetooth_1_1Manager.html#ae004b4701f383a22e0b9cb1093f579bb" title="Manager creates an instance of the Bluetooth manager. " alt="" coords="225,5,362,49"/>
-<area shape="rect" id="node3" href="$classLibBBB_1_1Bluetooth_1_1Manager.html#aba77bfc05cca940e709d9c0bb1106127" title="isConnected getter " alt="" coords="216,73,372,117"/>
-<area shape="rect" id="node4" href="$classLibBBB_1_1IO_1_1Input.html#a3a448ebc4e13f3813b6b80566af3fe79" title="waitForEdgeThreaded does the same thing as waitForEdge(), but does so in a threaded manner..." alt="" coords="217,141,370,185"/>
-<area shape="rect" id="node7" href="$classLibBBB_1_1IO_1_1MotorControl.html#a55cb5ace57f63ba73e679b5f79c3459a" title="MotorControl ServoControl constructor creates the class, and spawns the frequency control thread..." alt="" coords="208,209,380,253"/>
-<area shape="rect" id="node8" href="$classLibBBB_1_1IO_1_1UserLED.html#a5d6714d1ddc854308c1d4cc5448ded07" title="setState method sets the state of the LED " alt="" coords="220,277,368,321"/>
-<area shape="rect" id="node5" href="$classLibBBB_1_1IO_1_1Input.html#a4e59f6e2c64f7a85adff569daf35b3d3" title="Input constructs an input based on the given setup. The constructor will automatically export the pin..." alt="" coords="436,115,568,159"/>
-<area shape="rect" id="node6" href="$structLibBBB_1_1IO_1_1Input_1_1Setup.html#a1ad926b46c1818dd934b0b99ddb63386" title="LibBBB::IO::Input::\lSetup::Setup" alt="" coords="633,159,765,203"/>
-<area shape="rect" id="node9" href="$classLibBBB_1_1IO_1_1UserLED.html#a3ae6a5944f06980dee85eb4504ec9eb0" title="changeBlinkTime method changes the time of the blink " alt="" coords="428,239,577,283"/>
-<area shape="rect" id="node10" href="$structLibBBB_1_1IO_1_1UserLED_1_1Setup.html#a25c259e98aa65d6594d0031eb0463b01" title="LibBBB::IO::UserLED\l::Setup::Setup" alt="" coords="625,255,773,299"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1Input.html#a3a448ebc4e13f3813b6b80566af3fe79" title="waitForEdgeThreaded does the same thing as waitForEdge(), but does so in a threaded manner..." alt="" coords="217,73,370,117"/>
+<area shape="rect" id="node6" href="$classLibBBB_1_1IO_1_1MotorControl.html#a55cb5ace57f63ba73e679b5f79c3459a" title="MotorControl ServoControl constructor creates the class, and spawns the frequency control thread..." alt="" coords="208,141,380,185"/>
+<area shape="rect" id="node7" href="$classLibBBB_1_1IO_1_1UserLED.html#a5d6714d1ddc854308c1d4cc5448ded07" title="setState method sets the state of the LED " alt="" coords="220,209,368,253"/>
+<area shape="rect" id="node4" href="$classLibBBB_1_1IO_1_1Input.html#a4e59f6e2c64f7a85adff569daf35b3d3" title="Input constructs an input based on the given setup. The constructor will automatically export the pin..." alt="" coords="436,47,568,91"/>
+<area shape="rect" id="node5" href="$structLibBBB_1_1IO_1_1Input_1_1Setup.html#a1ad926b46c1818dd934b0b99ddb63386" title="LibBBB::IO::Input::\lSetup::Setup" alt="" coords="633,91,765,135"/>
+<area shape="rect" id="node8" href="$classLibBBB_1_1IO_1_1UserLED.html#a3ae6a5944f06980dee85eb4504ec9eb0" title="changeBlinkTime method changes the time of the blink " alt="" coords="428,171,577,215"/>
+<area shape="rect" id="node9" href="$structLibBBB_1_1IO_1_1UserLED_1_1Setup.html#a25c259e98aa65d6594d0031eb0463b01" title="LibBBB::IO::UserLED\l::Setup::Setup" alt="" coords="625,187,773,231"/>
 </map>

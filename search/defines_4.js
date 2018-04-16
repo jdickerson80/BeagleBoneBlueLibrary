@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['looperrorvalue',['LoopErrorValue',['../Input_8cpp.html#a191b45c98a7578bbc964f8a0aa7c5fb2',1,'Input.cpp']]]
+  ['microseconds',['Microseconds',['../MotorControl_8cpp.html#a6394d8d883bf74f9cecc246c0d880d15',1,'MotorControl.cpp']]]
 ];

@@ -9,16 +9,16 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 37)">
 <title>LibBBB::ThreadHelper::startJoinableThread</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-37 272.602,-37 272.602,4 -4,4"/>
-<!-- Node12 -->
+<!-- Node11 -->
 <g id="node1" class="node">
-<title>Node12</title>
+<title>Node11</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-32.5 116.02,-32.5 116.02,-.5 0,-.5"/>
 <text text-anchor="start" x="8" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::ThreadHelper</text>
 <text text-anchor="middle" x="58.01" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::startJoinableThread</text>
 </g>
-<!-- Node13 -->
+<!-- Node12 -->
 <g id="node2" class="node">
-<title>Node13</title>
+<title>Node12</title>
 <g id="a_node2"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#aba77bfc05cca940e709d9c0bb1106127" target="_top" xlink:title="isConnected getter ">
 <polygon fill="#ffffff" stroke="#000000" points="152.02,-.5 152.02,-32.5 268.602,-32.5 268.602,-.5 152.02,-.5"/>
 <text text-anchor="start" x="160.02" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::Bluetooth::</text>
@@ -26,9 +26,9 @@
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node13 -->
+<!-- Node11&#45;&gt;Node12 -->
 <g id="edge1" class="edge">
-<title>Node12&#45;&gt;Node13</title>
+<title>Node11&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M126.0715,-16.5C134.7093,-16.5 143.4875,-16.5 151.9548,-16.5"/>
 <polygon fill="#191970" stroke="#191970" points="126.023,-13.0001 116.0229,-16.5 126.0229,-20.0001 126.023,-13.0001"/>
 </g>
