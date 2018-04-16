@@ -54,8 +54,6 @@ private:
 	bool _sendThreadRunning;
 	bool _setupThreadRunning;
 
-//	clock_t _receiveTime;
-
 	// conditionals for pthread conditions
 	bool _sendCondition;
 
@@ -175,6 +173,13 @@ private:
 	 */
 	static void* sendMessage( void* input );
 
+	/**
+	 * @brief handleCallbacks method handles all of the callbacks for the manager
+	 * @note This thread is here so the rest of the threads do not have to
+	 * wait for a callback to return before it does its job.
+	 * @param input pointer to this class
+	 * @return NULL
+	 */
 	static void* handleCallbacks( void* input );
 
 	/**

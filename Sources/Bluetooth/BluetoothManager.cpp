@@ -6,7 +6,6 @@
 #include "ThreadHelper.h"
 #include "BluetoothInterface.h"
 
-#define Joinable
 namespace LibBBB {
 namespace Bluetooth {
 
@@ -56,8 +55,6 @@ Manager::Manager( const std::string& peerAddress
 	_sendMessageBuffer = (uint8_t*)malloc( _sendMessageSize * sizeof( uint8_t ) );
 
 	// init the pthread and conditional variables
-//	_receiveMutex = PTHREAD_MUTEX_INITIALIZER;
-
 	_sendMutex = PTHREAD_MUTEX_INITIALIZER;
 	_sendConditionalVariable = PTHREAD_COND_INITIALIZER;
 
@@ -94,7 +91,6 @@ Manager::~Manager()
 	close( _socket );
 
 	// destroy the mutex
-//	pthread_mutex_destroy( &_receiveMutex );
 	pthread_mutex_destroy( &_sendMutex );
 
 	// delete all the variables that were created by new
@@ -140,12 +136,12 @@ const uint8_t* const Manager::receiveData()
 	}
 
 	// lock the mutex
-	//	pthread_mutex_lock( &_receiveMutex );
+//	pthread_mutex_lock( &_receiveMutex );
 
 	const uint8_t * const data = _receiveMessageBuffer;
 
 	// unlock the mutex
-	//	pthread_mutex_unlock( &_receiveMutex );
+//	pthread_mutex_unlock( &_receiveMutex );
 
 	// otherwise return the pointer to the send buffer
 	return data;
@@ -163,26 +159,23 @@ void* Manager::receiveMessage( void* input )
 	ssize_t messageSize = manager->_receiveMessageSize;
 	void* receiveMessageBuffer = (void*)manager->_receiveMessageBuffer;
 	uint8_t buffer[ messageSize ];
-	//	pthread_mutex_t* mutex = &manager->_receiveMutex;
 
 	while ( manager->_receiveThreadRunning )
 	{
 		// recieve the message
 		ssize_t result = recv( manager->_socket, buffer, messageSize, 0 );
 
-//		manager->_receiveTime = clock();
-
 		// check if the socket is still connected
 		if ( errno == ENOTCONN || result != messageSize )
 		{
 			break;
 		}
+
 		// lock the mutex
 //		pthread_mutex_lock( mutex );
 
 		// copy the desired data to be sent to the buffer
 		memcpy( receiveMessageBuffer, buffer, messageSize );
-
 
 		// unlock the mutex
 //		pthread_mutex_unlock( &manager->_receiveMutex );
@@ -206,7 +199,6 @@ void* Manager::sendMessage( void* input )
 	pthread_cond_t* conditionalVariable = &manager->_sendConditionalVariable;
 	pthread_mutex_t* mutex = &manager->_sendMutex;
 	uint32_t pollRate = manager->_pollRate;
-//	int32_t maxReceiveDelta = 3000;// or 2500 //( ( (int)pollRate * 2 ) * 3 ) / 100;
 
 	while ( manager->_sendThreadRunning )
 	{
@@ -229,27 +221,11 @@ void* Manager::sendMessage( void* input )
 		// unlock the mutex
 		pthread_mutex_unlock( mutex );
 
-		//		printf("send error %s size %i\n", strerror( errno ), result );
-
 		// check for send errors
 		if ( result < 0 && errno != 0 )
 		{
-//			manager->_currentState = State::Connecting;
-			// there is an error so stop send and receive threads, and start
-			// the setup thread
-//			printf("send broke\n");
 			break;
 		}
-
-//		int delta = clock() - manager->_receiveTime;
-//		if ( delta > maxReceiveDelta )
-//		{
-////			printf("rec timed out delt %i rate %i\n", delta, maxReceiveDelta );
-//			break;
-//		}
-//		printf("del %i rate %i\n", delta, maxReceiveDelta );
-
-//		printf("sent %i\n", result );
 
 		// check if all of the data was sent
 		if ( result != messageSize )
@@ -335,8 +311,6 @@ void* Manager::setupConnection( void* input )
 		{
 			// there is an error, so close the socket and try again
 			close( localSocket );
-//			printf("thread error is %s %i\n", strerror( errno ), localSocket );
-//			sleep( 1 );
 			continue;
 		}
 
@@ -346,23 +320,24 @@ void* Manager::setupConnection( void* input )
 		// accept the connection
 		manager->_socket = accept( localSocket, (sockaddr*)&peerCopy, &opt  );
 
+		// connected, so start sending and receiving data
 		manager->startSendAndReceiveThreads();
+
 		// close the socket
 		close( localSocket );
 
-		// start the send and receive threads, and
-		// shut this thread down
+		// set the state
 		manager->_currentState = State::Connected;
 
-//		printf("waiting to join\n");
-#if defined( Joinable )
+		// wait for send and threads to join
 		pthread_join( manager->_receiveThread, NULL );
-#endif
-//		printf("rec join\n");
 		pthread_join( manager->_sendThread, NULL );
-//		printf("send join\n");
+
+		// set the flags to false
 		manager->_sendThreadRunning = false;
 		manager->_receiveThreadRunning = false;
+
+		// close the socket
 		close( manager->_socket );
 	}
 
@@ -372,13 +347,7 @@ void* Manager::setupConnection( void* input )
 
 void Manager::startSendAndReceiveThreads()
 {
-//	_receiveTime = clock();
-//	printf("start clock %li\n", _receiveTime );
-#if defined( Joinable )
 	LibBBB::ThreadHelper::startJoinableThread( &_receiveThread, receiveMessage, &_receiveThreadRunning, static_cast< void* >( this ) );
-#else
-	LibBBB::ThreadHelper::startDetachedThread( &_receiveThread, receiveMessage, &_receiveThreadRunning, static_cast< void* >( this ) );
-#endif
 	LibBBB::ThreadHelper::startJoinableThread( &_sendThread, sendMessage, &_sendThreadRunning, static_cast< void* >( this ) );
 }
 } // namespace Bluetooth
