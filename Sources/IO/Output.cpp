@@ -15,7 +15,6 @@ Output::Output( int number, const Setup& setup )
 
 Output::~Output()
 {
-	pthread_cancel( this->_thread );
 }
 
 int Output::setValue( IOBase::Value::Enum value )
