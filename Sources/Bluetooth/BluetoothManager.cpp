@@ -182,6 +182,8 @@ void* Manager::receiveMessage( void* input )
 
 	}
 
+	manager->_receiveThreadRunning = false;
+
 	if ( manager->_sendThreadRunning )
 	{
 		pthread_cancel( manager->_sendThread );
@@ -238,6 +240,8 @@ void* Manager::sendMessage( void* input )
 		usleep( pollRate );
 	}
 
+	manager->_sendThreadRunning = false;
+
 	if ( manager->_receiveThreadRunning )
 	{
 		pthread_cancel( manager->_receiveThread );
@@ -247,33 +251,6 @@ void* Manager::sendMessage( void* input )
 	return NULL;
 }
 
-void* Manager::handleCallbacks( void* input )
-{
-	// init the local variables
-	Manager* manager = static_cast< Manager* >( input );
-	Manager::State::Enum localState = manager->_currentState;
-	uint32_t pollRate = manager->_pollRate;
-
-	Manager::Interface* listenerObject = manager->_listenerObject;
-	Manager::stateChange listenerMethod = manager->_listenerMethod;
-
-	while ( true )
-	{
-		Manager::State::Enum tempState = manager->_currentState;
-		if ( localState != tempState )
-		{
-			localState = tempState;
-			// there is so signal the new state
-			(listenerObject->*listenerMethod)( tempState );
-		}
-
-		// sleep for the receive/send rate
-		usleep( pollRate );
-	}
-
-	pthread_exit( NULL );
-	return NULL;
-}
 
 void* Manager::setupConnection( void* input )
 {
@@ -320,6 +297,8 @@ void* Manager::setupConnection( void* input )
 		// accept the connection
 		manager->_socket = accept( localSocket, (sockaddr*)&peerCopy, &opt  );
 
+		localCopy.rc_channel = peerCopy.rc_channel;
+
 		// connected, so start sending and receiving data
 		manager->startSendAndReceiveThreads();
 
@@ -334,11 +313,38 @@ void* Manager::setupConnection( void* input )
 		pthread_join( manager->_sendThread, NULL );
 
 		// set the flags to false
-		manager->_sendThreadRunning = false;
-		manager->_receiveThreadRunning = false;
+
 
 		// close the socket
 		close( manager->_socket );
+	}
+
+	pthread_exit( NULL );
+	return NULL;
+}
+
+void* Manager::handleCallbacks( void* input )
+{
+	// init the local variables
+	Manager* manager = static_cast< Manager* >( input );
+	Manager::State::Enum localState = manager->_currentState;
+	uint32_t pollRate = manager->_pollRate;
+
+	Manager::Interface* listenerObject = manager->_listenerObject;
+	Manager::stateChange listenerMethod = manager->_listenerMethod;
+
+	while ( true )
+	{
+		Manager::State::Enum tempState = manager->_currentState;
+		if ( localState != tempState )
+		{
+			localState = tempState;
+			// there is so signal the new state
+			(listenerObject->*listenerMethod)( tempState );
+		}
+
+		// sleep for the receive/send rate
+		usleep( pollRate );
 	}
 
 	pthread_exit( NULL );
