@@ -5,6 +5,7 @@
 #include <bluetooth/rfcomm.h>
 #include "ThreadHelper.h"
 #include "BluetoothInterface.h"
+#include <signal.h>
 
 namespace LibBBB {
 namespace Bluetooth {
@@ -29,6 +30,7 @@ Manager::Manager( const std::string& peerAddress
 	, _listenerObject( listenerObject )
 	, _listenerMethod( listenerMethod )
 {
+	signal( SIGPIPE, SIG_IGN );
 	if ( listenerObject )
 	{
 		LibBBB::ThreadHelper::startDetachedThread( &_callbackThread, handleCallbacks, &_callbackThreadRunning, static_cast< void* >( this ) );
@@ -317,6 +319,7 @@ void* Manager::setupConnection( void* input )
 
 		// close the socket
 		close( manager->_socket );
+		usleep( 250000 );
 	}
 
 	pthread_exit( NULL );
