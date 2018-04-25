@@ -1,5 +1,11 @@
 var files =
 [
+    [ "ADCMacros.h", "ADCMacros_8h.html", "ADCMacros_8h" ],
+    [ "AnalogToDigitalController.cpp", "AnalogToDigitalController_8cpp.html", "AnalogToDigitalController_8cpp" ],
+    [ "AnalogToDigitalController.h", "AnalogToDigitalController_8h.html", [
+      [ "AnalogToDigitalController", "classLibBBB_1_1AnalogToDigitalController.html", "classLibBBB_1_1AnalogToDigitalController" ],
+      [ "Channel", "structLibBBB_1_1AnalogToDigitalController_1_1Channel.html", "structLibBBB_1_1AnalogToDigitalController_1_1Channel" ]
+    ] ],
     [ "BluetoothInterface.h", "BluetoothInterface_8h.html", [
       [ "Interface", "classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html", "classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface" ]
     ] ],
@@ -21,7 +27,9 @@ var files =
       [ "Value", "structLibBBB_1_1IO_1_1IOBase_1_1Value.html", "structLibBBB_1_1IO_1_1IOBase_1_1Value" ]
     ] ],
     [ "LinearConverter.h", "LinearConverter_8h.html", [
-      [ "LinearConverter", "classLibBBB_1_1Math_1_1LinearConverter.html", "classLibBBB_1_1Math_1_1LinearConverter" ]
+      [ "LinearConverter", "classLibBBB_1_1Math_1_1LinearConverter.html", "classLibBBB_1_1Math_1_1LinearConverter" ],
+      [ "LinearConverter< float >", "classLibBBB_1_1Math_1_1LinearConverter_3_01float_01_4.html", "classLibBBB_1_1Math_1_1LinearConverter_3_01float_01_4" ],
+      [ "LinearConverter< double >", "classLibBBB_1_1Math_1_1LinearConverter_3_01double_01_4.html", "classLibBBB_1_1Math_1_1LinearConverter_3_01double_01_4" ]
     ] ],
     [ "ManagerPRUs.cpp", "ManagerPRUs_8cpp.html", "ManagerPRUs_8cpp" ],
     [ "ManagerPRUs.h", "ManagerPRUs_8h.html", [

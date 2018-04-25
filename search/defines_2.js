@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gpio_5fpath',['GPIO_PATH',['../IOBase_8cpp.html#aa735592f7579934ca442d9a338588b90',1,'IOBase.cpp']]],
-  ['greenpath',['GreenPath',['../UserLED_8cpp.html#a6b8b4c00cb98582db42fa936af71163e',1,'UserLED.cpp']]]
+  ['dc_5fjack_5fadc_5fch',['DC_JACK_ADC_CH',['../ADCMacros_8h.html#a66a77ecd1d152a65209daef5ad541674',1,'ADCMacros.h']]],
+  ['dc_5fjack_5foffset',['DC_JACK_OFFSET',['../ADCMacros_8h.html#a962e4b1dedba6094a91d4b0cab6128ba',1,'ADCMacros.h']]]
 ];

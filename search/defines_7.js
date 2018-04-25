@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['user0path',['User0Path',['../UserLED_8cpp.html#afabf6f558aca8142af448b23323a92af',1,'UserLED.cpp']]],
-  ['user1path',['User1Path',['../UserLED_8cpp.html#a56c0873183a71f3767aae279bde09f0e',1,'UserLED.cpp']]],
-  ['user2path',['User2Path',['../UserLED_8cpp.html#a8e176aefe0b87179239ac51242ee1a20',1,'UserLED.cpp']]],
-  ['user3path',['User3Path',['../UserLED_8cpp.html#ad74c1b5eeadb5b28e24e7b9b97e29565',1,'UserLED.cpp']]]
+  ['microseconds',['Microseconds',['../MotorControl_8cpp.html#a6394d8d883bf74f9cecc246c0d880d15',1,'MotorControl.cpp']]],
+  ['mmap_5foffset',['MMAP_OFFSET',['../ADCMacros_8h.html#a8ff6e6c7f0cf0d6c8814c58845f6a243',1,'ADCMacros.h']]],
+  ['mmap_5fsize',['MMAP_SIZE',['../ADCMacros_8h.html#a1e086fd4bfcf1930e8ffbcdd53f62a6a',1,'ADCMacros.h']]],
+  ['modulemode_5fdisabled',['MODULEMODE_DISABLED',['../ADCMacros_8h.html#acd1c3c5ef6ef99b3d0ba4d0a400b8b98',1,'ADCMacros.h']]],
+  ['modulemode_5fenable',['MODULEMODE_ENABLE',['../ADCMacros_8h.html#a23433cfb746d7323458cb519958ea8bd',1,'ADCMacros.h']]]
 ];

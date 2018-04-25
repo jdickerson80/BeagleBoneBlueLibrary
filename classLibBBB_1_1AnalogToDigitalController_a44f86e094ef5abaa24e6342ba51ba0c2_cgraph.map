@@ -1,0 +1,4 @@
+<map id="LibBBB::AnalogToDigitalController::batteryVoltage" name="LibBBB::AnalogToDigitalController::batteryVoltage">
+<area shape="rect" id="node2" href="$classLibBBB_1_1AnalogToDigitalController.html#ae9099e54e15ebdf0213db4b7b87e3db4" title="adcVoltage gets the ADC channel&#39;s unscaled value " alt="" coords="278,5,503,49"/>
+<area shape="rect" id="node3" href="$classLibBBB_1_1AnalogToDigitalController.html#a70fd232420c8ad366bd456e9db580369" title="rawADCValue gets the raw (unscaled) ADC value " alt="" coords="551,5,777,49"/>
+</map>

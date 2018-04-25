@@ -1,5 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classLibBBB_1_1IO_1_1IOBase.html" title="The IOBase class is the base class for all GPIO. This class contains all of the methods to call into ..." alt="" coords="5,32,144,60"/>
-<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1Input.html" title="The Input class represents a GPIO pin that is set up as an input. This class allows the user to add a..." alt="" coords="198,5,322,33"/>
-<area shape="rect" id="node3" href="$classLibBBB_1_1IO_1_1Output.html" title="The Output class represents a GPIO pin that is set up as an output. This class has the ability to tog..." alt="" coords="192,57,327,85"/>
+<area shape="rect" id="node1" href="$structLibBBB_1_1IO_1_1Input_1_1Edge.html" title="The Edge struct holds the enum that represents the edge events. " alt="" coords="5,5,168,33"/>
 </map>

@@ -1,18 +1,9 @@
 var searchData=
 [
-  ['path',['path',['../classLibBBB_1_1IO_1_1IOBase.html#a71d8f1f57eb6de8ed0187eaad8902b1c',1,'LibBBB::IO::IOBase']]],
-  ['pathbase',['PathBase',['../UserLED_8cpp.html#a82dabd5082a2cbe691b89eec76161e4e',1,'UserLED.cpp']]],
-  ['pru0_5fname',['PRU0_NAME',['../PRUDefinitions_8h.html#ac5fb5c49d130493456d42d3cdc374947',1,'PRUDefinitions.h']]],
-  ['pru0_5fuevent',['PRU0_UEVENT',['../PRUDefinitions_8h.html#a313122d655f3406ee9631fed416c58e1',1,'PRUDefinitions.h']]],
-  ['pru1_5fname',['PRU1_NAME',['../PRUDefinitions_8h.html#a4789c36d682049643dd61b8dcd033aa6',1,'PRUDefinitions.h']]],
-  ['pru1_5fuevent',['PRU1_UEVENT',['../PRUDefinitions_8h.html#af7aca709512c047b168e35f9f5189655',1,'PRUDefinitions.h']]],
-  ['pru_5faddr',['PRU_ADDR',['../PRUDefinitions_8h.html#a1104fd5f241b4e4cefa0c5b15a946c0b',1,'PRUDefinitions.h']]],
-  ['pru_5fbind_5fpath',['PRU_BIND_PATH',['../PRUDefinitions_8h.html#a38272cd425c663c96b36a3136a835d57',1,'PRUDefinitions.h']]],
-  ['pru_5ffrequency_5fin_5fmhz',['PRU_FREQUENCY_IN_MHz',['../MotorControl_8cpp.html#abf4682a2c3a746e6adb7aeb6f627d49d',1,'MotorControl.cpp']]],
-  ['pru_5flen',['PRU_LEN',['../PRUDefinitions_8h.html#a5f4f423870685091815bc524a8d4fe8a',1,'PRUDefinitions.h']]],
-  ['pru_5fservo_5floop_5finstructions',['PRU_SERVO_LOOP_INSTRUCTIONS',['../MotorControl_8cpp.html#a15b029ba7876ec787c8271107694a095',1,'MotorControl.cpp']]],
-  ['pru_5fsharedmem',['PRU_SHAREDMEM',['../PRUDefinitions_8h.html#af40a3e887744c288d2dea3c2ad18e1c3',1,'PRUDefinitions.h']]],
-  ['pru_5funbind_5fpath',['PRU_UNBIND_PATH',['../PRUDefinitions_8h.html#ac529e740c7839b56b7d4554dfd9e114d',1,'PRUDefinitions.h']]],
-  ['prudefinitions_2eh',['PRUDefinitions.h',['../PRUDefinitions_8h.html',1,'']]],
-  ['pulsewidth',['pulseWidth',['../classLibBBB_1_1IO_1_1MotorControl.html#a55e9586e72ae2fc6ab868f8cfa6429a0',1,'LibBBB::IO::MotorControl']]]
+  ['off',['Off',['../structLibBBB_1_1IO_1_1UserLED_1_1State.html#a248d1dd9a0eae7250ecaf7b11773695bacccea792708757ea1af3fa41a8e6072c',1,'LibBBB::IO::UserLED::State']]],
+  ['on',['On',['../structLibBBB_1_1IO_1_1UserLED_1_1State.html#a248d1dd9a0eae7250ecaf7b11773695ba982203eea5fbce20a417500c6ec8d34b',1,'LibBBB::IO::UserLED::State']]],
+  ['one',['One',['../structLibBBB_1_1AnalogToDigitalController_1_1Channel.html#a7cd631db95b927a9084af58434ed1a63a6ea92fc171ee1006e3896df49b0d2131',1,'LibBBB::AnalogToDigitalController::Channel::One()'],['../structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html#ac9b3074b7855064180774d7d5bfe1372ab6eb772182d1f9b0a2561e2e85776139',1,'LibBBB::IO::MotorControl::Motor::One()']]],
+  ['output',['Output',['../classLibBBB_1_1IO_1_1Output.html',1,'LibBBB::IO::Output'],['../structLibBBB_1_1IO_1_1IOBase_1_1Direction.html#a22e565ba4f7b7b85170b3e6e5cb084d2a519b4d0e68b6cc70dd68cf3b01c8a0a5',1,'LibBBB::IO::IOBase::Direction::Output()'],['../classLibBBB_1_1IO_1_1Output.html#ac8610e35f05b7facdf904c7f3033381b',1,'LibBBB::IO::Output::Output()'],['../ADCMacros_8h.html#a61a3c9a18380aafb6e430e79bf596557',1,'OUTPUT():&#160;ADCMacros.h']]],
+  ['output_2ecpp',['Output.cpp',['../Output_8cpp.html',1,'']]],
+  ['output_2eh',['Output.h',['../Output_8h.html',1,'']]]
 ];

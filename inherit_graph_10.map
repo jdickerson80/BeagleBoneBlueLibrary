@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structLibBBB_1_1IO_1_1Output_1_1Setup.html" title="The Setup struct represents the settings that an output can have. This struct makes it easier to crea..." alt="" coords="5,5,140,49"/>
+<area shape="rect" id="node1" href="$classLibBBB_1_1IO_1_1MotorControl.html" title="The MotorControl class controls a PRU controlled servo. It handles all control of the servo via this ..." alt="" coords="5,5,177,33"/>
+<area shape="rect" id="node2" href="$classLibBBB_1_1IO_1_1ServoControl.html" title="The ServoControl class controls a servo motor. For convenience, this class adds API to control the se..." alt="" coords="225,5,398,33"/>
 </map>

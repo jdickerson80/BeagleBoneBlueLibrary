@@ -1,4 +1,6 @@
 <map id="LibBBB::Math::Range::highValue" name="LibBBB::Math::Range::highValue">
 <area shape="rect" id="node2" href="$classLibBBB_1_1Math_1_1LinearConverter.html#ae5647c399171683e3516211bd5e4da2c" title="convertXtoY getter. Uses y = mx + b. " alt="" coords="203,5,409,49"/>
 <area shape="rect" id="node3" href="$classLibBBB_1_1Math_1_1LinearConverter.html#aeb7daf591e9ff862110daf5abe8f8c65" title="convertYtoX getter. Uses x = ( y &#45; b ) / m. " alt="" coords="203,73,409,117"/>
+<area shape="rect" id="node4" href="$classLibBBB_1_1Math_1_1LinearConverter_3_01double_01_4.html#ac647252d2911bc9f827f2c89183c8af8" title="LibBBB::Math::LinearConverter\l\&lt; double \&gt;::convertXtoY" alt="" coords="203,141,409,185"/>
+<area shape="rect" id="node5" href="$classLibBBB_1_1Math_1_1LinearConverter_3_01double_01_4.html#a68e663eddf273f2c86f110fca2898060" title="LibBBB::Math::LinearConverter\l\&lt; double \&gt;::convertYtoX" alt="" coords="203,209,409,253"/>
 </map>

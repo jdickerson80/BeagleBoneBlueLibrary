@@ -1,3 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html" title="The Servo struct holds all of the allowable motor channels. " alt="" coords="5,5,177,49"/>
+<area shape="rect" id="node1" href="$structLibBBB_1_1IO_1_1IOBase_1_1Value.html" title="The Value struct holds the enyn to represent the GPIO being low or high. " alt="" coords="5,5,144,49"/>
 </map>
