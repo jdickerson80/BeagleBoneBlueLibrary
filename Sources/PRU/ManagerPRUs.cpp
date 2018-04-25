@@ -1,9 +1,9 @@
 #include "ManagerPRUs.h"
 
 #include "PRUDefinitions.h"
-#include <fcntl.h> // for open
-#include <unistd.h> // for close
-#include <sys/mman.h>	// mmap
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/mman.h>
 #include <string.h>
 
 #define FILE_ERROR ( -1 )
