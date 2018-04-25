@@ -203,6 +203,7 @@ void* Manager::sendMessage( void* input )
 	pthread_cond_t* conditionalVariable = &manager->_sendConditionalVariable;
 	pthread_mutex_t* mutex = &manager->_sendMutex;
 	uint32_t pollRate = manager->_pollRate;
+	uint8_t* sendMessageBuffer = manager->_sendMessageBuffer;
 
 	while ( manager->_sendThreadRunning )
 	{
@@ -217,7 +218,7 @@ void* Manager::sendMessage( void* input )
 		}
 
 		// send the data
-		ssize_t result = send( manager->_socket, (void*)manager->_sendMessageBuffer, messageSize, 0 );
+		ssize_t result = send( manager->_socket, sendMessageBuffer, messageSize, 0 );
 
 		// set the condition flag to false
 		manager->_sendCondition = false;
