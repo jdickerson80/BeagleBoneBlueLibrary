@@ -184,8 +184,6 @@ void* Manager::receiveMessage( void* input )
 
 	}
 
-	manager->_receiveThreadRunning = false;
-
 	if ( manager->_sendThreadRunning )
 	{
 		pthread_cancel( manager->_sendThread );
@@ -242,8 +240,6 @@ void* Manager::sendMessage( void* input )
 		// sleep for the receive/send rate
 		usleep( pollRate );
 	}
-
-	manager->_sendThreadRunning = false;
 
 	if ( manager->_receiveThreadRunning )
 	{
@@ -316,11 +312,11 @@ void* Manager::setupConnection( void* input )
 		pthread_join( manager->_sendThread, NULL );
 
 		// set the flags to false
-
+		manager->_sendThreadRunning = false;
+		manager->_receiveThreadRunning = false;
 
 		// close the socket
 		close( manager->_socket );
-		usleep( 250000 );
 	}
 
 	pthread_exit( NULL );
