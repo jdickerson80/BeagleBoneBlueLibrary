@@ -8,7 +8,7 @@
 #include <string>
 #include <time.h>
 
-class sockaddr_rc;
+class sockaddr_in;
 
 namespace LibBBB {
 namespace Bluetooth {
@@ -82,8 +82,8 @@ private:
 	uint8_t* _sendMessageBuffer;
 
 	// pointer to the peer address
-	sockaddr_rc* _localAddress;
-	sockaddr_rc* _peerAddress;
+	sockaddr_in* _localAddress;
+	sockaddr_in* _peerAddress;
 
 	// state of the connection
 	State::Enum _currentState;

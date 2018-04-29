@@ -6,7 +6,7 @@
 #include "ThreadHelper.h"
 #include "BluetoothInterface.h"
 #include <signal.h>
-
+#include <arpa/inet.h>
 namespace LibBBB {
 namespace Bluetooth {
 
@@ -36,21 +36,9 @@ Manager::Manager( const std::string& peerAddress
 		LibBBB::ThreadHelper::startDetachedThread( &_callbackThread, handleCallbacks, &_callbackThreadRunning, static_cast< void* >( this ) );
 	}
 
-	// create the addresses
-	_localAddress = new sockaddr_rc;
-	_peerAddress = new sockaddr_rc;
+	_localAddress = new sockaddr_in;
+	*_localAddress = { AF_INET, htons( 3333 ), htonl( INADDR_ANY ) };
 
-	// clear the address
-	*_localAddress = { 0 };
-	*_peerAddress = { 0 };
-
-	// setup the bluetooth family
-	_localAddress->rc_family = AF_BLUETOOTH;
-	_peerAddress->rc_family = AF_BLUETOOTH;
-
-	// convert the string to the addresses
-	str2ba( localAddress.c_str(), &_localAddress->rc_bdaddr );
-	str2ba( peerAddress.c_str(), &_peerAddress->rc_bdaddr );
 
 	// create the send and receive buffers
 	_receiveMessageBuffer = (uint8_t*)malloc( _receiveMessageSize * sizeof( uint8_t ) );
@@ -262,12 +250,12 @@ void* Manager::setupConnection( void* input )
 	int localSocket;
 
 	// get a local copy of the addresses
-	sockaddr_rc localCopy = *manager->_localAddress;
-	sockaddr_rc peerCopy = *manager->_peerAddress;
+	sockaddr_in localCopy = *manager->_localAddress;
+	sockaddr_in peerCopy = *manager->_peerAddress;
 
 	// setup the channel
-	localCopy.rc_channel = 1;
-	peerCopy.rc_channel = 1;
+//	localCopy.rc_channel = 1;
+//	peerCopy.rc_channel = 1;
 
 	while ( manager->_setupThreadRunning )
 	{
@@ -277,7 +265,7 @@ void* Manager::setupConnection( void* input )
 		returnValue = 0;
 
 		// get the socket
-		localSocket = socket( AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM );
+		localSocket = socket( AF_INET, SOCK_STREAM, 0 );
 
 		// bind it
 		returnValue |= bind( localSocket, (sockaddr*)&localCopy, sizeof( localCopy ) );
@@ -296,7 +284,7 @@ void* Manager::setupConnection( void* input )
 		// accept the connection
 		manager->_socket = accept( localSocket, (sockaddr*)&peerCopy, &opt  );
 
-		localCopy.rc_channel = peerCopy.rc_channel;
+//		localCopy.rc_channel = peerCopy.rc_channel;
 
 		// connected, so start sending and receiving data
 		manager->startSendAndReceiveThreads();
