@@ -30,14 +30,17 @@ Manager::Manager( const std::string& peerAddress
 	, _listenerObject( listenerObject )
 	, _listenerMethod( listenerMethod )
 {
-	signal( SIGPIPE, SIG_IGN );
+//	signal( SIGPIPE, SIG_IGN );
 	if ( listenerObject )
 	{
 		LibBBB::ThreadHelper::startDetachedThread( &_callbackThread, handleCallbacks, &_callbackThreadRunning, static_cast< void* >( this ) );
 	}
 
 	_localAddress = new sockaddr_in;
-	*_localAddress = { AF_INET, htons( 3333 ), htonl( INADDR_ANY ) };
+//	*_localAddress = { AF_INET, htons( 33 ), htonl( INADDR_ANY ) };
+	_localAddress->sin_family = AF_INET;
+	_localAddress->sin_addr.s_addr = htonl( INADDR_ANY );
+	_localAddress->sin_port = htons( 555 );
 
 
 	// create the send and receive buffers
@@ -250,8 +253,8 @@ void* Manager::setupConnection( void* input )
 	int localSocket;
 
 	// get a local copy of the addresses
-	sockaddr_in localCopy = *manager->_localAddress;
-	sockaddr_in peerCopy = *manager->_peerAddress;
+//	sockaddr_in localCopy = *manager->_localAddress;
+//	sockaddr_in peerCopy = *manager->_peerAddress;
 
 	// setup the channel
 //	localCopy.rc_channel = 1;
@@ -268,7 +271,7 @@ void* Manager::setupConnection( void* input )
 		localSocket = socket( AF_INET, SOCK_STREAM, 0 );
 
 		// bind it
-		returnValue |= bind( localSocket, (sockaddr*)&localCopy, sizeof( localCopy ) );
+		returnValue |= bind( localSocket, (sockaddr*)manager->_localAddress, sizeof( *manager->_localAddress ) );
 
 		// check for error
 		if ( errno != 0 && returnValue <= 0 )
@@ -282,7 +285,7 @@ void* Manager::setupConnection( void* input )
 		returnValue |= listen( localSocket, 1 ) ;
 
 		// accept the connection
-		manager->_socket = accept( localSocket, (sockaddr*)&peerCopy, &opt  );
+		manager->_socket = accept( localSocket, (sockaddr*)&manager->_peerAddress, &opt  );
 
 //		localCopy.rc_channel = peerCopy.rc_channel;
 
