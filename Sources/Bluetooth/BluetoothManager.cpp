@@ -175,8 +175,10 @@ void* Manager::receiveMessage( void* input )
 
 	}
 
+	manager->_receiveThreadRunning = false;
 	if ( manager->_sendThreadRunning )
 	{
+//		printf("rec killing send\n");
 		pthread_cancel( manager->_sendThread );
 	}
 
@@ -232,8 +234,10 @@ void* Manager::sendMessage( void* input )
 		usleep( pollRate );
 	}
 
+	manager->_sendThreadRunning = false;
 	if ( manager->_receiveThreadRunning )
 	{
+//		printf("send killing rec\n");
 		pthread_cancel( manager->_receiveThread );
 	}
 
@@ -303,8 +307,6 @@ void* Manager::setupConnection( void* input )
 		pthread_join( manager->_sendThread, NULL );
 
 		// set the flags to false
-		manager->_sendThreadRunning = false;
-		manager->_receiveThreadRunning = false;
 
 		// close the socket
 		close( manager->_socket );
